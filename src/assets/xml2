@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+    xmlns:cdt="urn:DocumentInformation:names:specification:ubl:colombia:schema:xsd:DocumentInformationAggregateComponents-1"
+    xmlns:chl="urn:carvajal:names:specification:ubl:colombia:schema:xsd:CarvajalHealthComponents-1"
+    xmlns:clm54217="urn:un:unece:uncefact:codelist:specification:54217:2001"
+    xmlns:clm66411="urn:un:unece:uncefact:codelist:specification:66411:2001"
+    xmlns:clmIANAMIMEMediaType="urn:un:unece:uncefact:codelist:specification:IANAMIMEMediaType:2003"
+    xmlns:cts="urn:carvajal:names:specification:ubl:colombia:schema:xsd:CarvajalAggregateComponents-1"
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+    xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+    xmlns:grl="urn:General:names:specification:ubl:colombia:schema:xsd:GeneralAggregateComponents-1"
+    xmlns:ipt="urn:DocumentInformation:names:specification:ubl:colombia:schema:xsd:InteroperabilidadPT-1"
+    xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2"
+    xmlns:sts="dian:gov:co:facturaelectronica:Structures-2-1"
+    xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2"
+    xmlns:xades="http://uri.etsi.org/01903/v1.3.2#"
+    xmlns:xades141="http://uri.etsi.org/01903/v1.4.1#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd">
+    <ext:UBLExtensions>
+        <ext:UBLExtension>
+            <ext:ExtensionContent>
+                <sts:DianExtensions>
+                    <sts:InvoiceControl>
+                        <sts:InvoiceAuthorization>18764021195135</sts:InvoiceAuthorization>
+                        <sts:AuthorizationPeriod>
+                            <cbc:StartDate>2021-11-15</cbc:StartDate>
+                            <cbc:EndDate>2023-11-15</cbc:EndDate>
+                        </sts:AuthorizationPeriod>
+                        <sts:AuthorizedInvoices>
+                            <sts:Prefix />
+                            <sts:From>706183546</sts:From>
+                            <sts:To>706256002</sts:To>
+                        </sts:AuthorizedInvoices>
+                    </sts:InvoiceControl>
+                    <sts:InvoiceSource>
+                        <cbc:IdentificationCode listAgencyID="6"
+                            listAgencyName="United Nations Economic Commission for Europe"
+                            listSchemeURI="urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode-2.1">
+                            CO</cbc:IdentificationCode>
+                    </sts:InvoiceSource>
+                    <sts:SoftwareProvider>
+                        <sts:ProviderID schemeAgencyID="195"
+                            schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)"
+                            schemeID="0" schemeName="31">890321151</sts:ProviderID>
+                        <sts:SoftwareID schemeAgencyID="195"
+                            schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)">
+                            eb9d23d3-f109-42b3-aa4e-394e22481a69</sts:SoftwareID>
+                    </sts:SoftwareProvider>
+                    <sts:SoftwareSecurityCode schemeAgencyID="195"
+                        schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)">
+                        6eb06371a9d1116650c62de7b6c00d522d6534655fec9f618cc77bf99b779544f52a7d565ad473e7835cd89e0b27eed8</sts:SoftwareSecurityCode>
+                    <sts:AuthorizationProvider>
+                        <sts:AuthorizationProviderID schemeAgencyID="195"
+                            schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)"
+                            schemeID="4" schemeName="31">800197268</sts:AuthorizationProviderID>
+                    </sts:AuthorizationProvider>
+                    <sts:QRCode>
+                        https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=1a20ec184948eb64ea768cee9dd858215d8b476a29560675270a2309fa1e7f7fa9451411efc9982ec313bd1beafd36e7</sts:QRCode>
+                </sts:DianExtensions>
+            </ext:ExtensionContent>
+        </ext:UBLExtension>
+        <ext:UBLExtension>
+            <ext:ExtensionContent>
+                <cts:AdditionalDocumentInformation>
+                    <cts:Header>
+                        <cts:PDFTemplate>PPGI01</cts:PDFTemplate>
+                    </cts:Header>
+                    <cts:Items>
+                        <cts:Item>
+                            <cts:LineNumber>1</cts:LineNumber>
+                        </cts:Item>
+                    </cts:Items>
+                </cts:AdditionalDocumentInformation>
+            </ext:ExtensionContent>
+        </ext:UBLExtension>
+        <ext:UBLExtension>
+            <ext:ExtensionContent>
+                <cdt:AdditionalDocumentInformation>
+                    <cdt:Header>
+                        <cdt:DocumentType>INVOIC</cdt:DocumentType>
+                    </cdt:Header>
+                </cdt:AdditionalDocumentInformation>
+            </ext:ExtensionContent>
+        </ext:UBLExtension>
+        <ext:UBLExtension>
+            <ext:ExtensionContent>
+                <grl:AdditionalInformationGeneral>
+                    <grl:Header>
+                        <grl:AccountingSupplierParty>
+                            <grl:Party>
+                                <grl:PartyIdentificationID>900007650</grl:PartyIdentificationID>
+                            </grl:Party>
+                        </grl:AccountingSupplierParty>
+                        <grl:AccountingCustomerParty>
+                            <grl:Party />
+                        </grl:AccountingCustomerParty>
+                    </grl:Header>
+                    <grl:Items>
+                        <grl:Item>
+                            <grl:LineNumber>1</grl:LineNumber>
+                        </grl:Item>
+                    </grl:Items>
+                </grl:AdditionalInformationGeneral>
+            </ext:ExtensionContent>
+        </ext:UBLExtension>
+        <ext:UBLExtension>
+            <ext:ExtensionContent>
+                <ds:Signature Id="xmldsig-beaae938-036c-4f38-9beb-504ab2b64c84">
+                    <ds:SignedInfo>
+                        <ds:CanonicalizationMethod
+                            Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+                        <ds:SignatureMethod
+                            Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+                        <ds:Reference Id="xmldsig-beaae938-036c-4f38-9beb-504ab2b64c84-ref0" URI="">
+                            <ds:Transforms>
+                                <ds:Transform
+                                    Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+                            </ds:Transforms>
+                            <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+                            <ds:DigestValue>XdZ+ktey9+NI0dc/iFXny5dEM8VJGXsGRMn/r7AOz1Q=</ds:DigestValue>
+                        </ds:Reference>
+                        <ds:Reference URI="#xmldsig-beaae938-036c-4f38-9beb-504ab2b64c84-keyinfo">
+                            <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+                            <ds:DigestValue>A8ikJlE23gCdamm8/xO4kOc36/Iz2QnpSa7lGDeo0Rw=</ds:DigestValue>
+                        </ds:Reference>
+                        <ds:Reference Type="http://uri.etsi.org/01903#SignedProperties"
+                            URI="#xmldsig-beaae938-036c-4f38-9beb-504ab2b64c84-signedprops">
+                            <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+                            <ds:DigestValue>9FFGxC9vAYS/soYCzGdvmX6+jaaYvvej6PU4DDJ5pSE=</ds:DigestValue>
+                        </ds:Reference>
+                    </ds:SignedInfo>
+                    <ds:SignatureValue Id="xmldsig-beaae938-036c-4f38-9beb-504ab2b64c84-sigvalue">
+                        mbE9UOzbKPiu6S/GcV6EvFK9dI7Kha9A6YpSPcwBqyHUbTQ3qUPxOI8qXBeJ5p6fWmqSNOOgzXb1
+                        YzqZvQ5XdzOxNgYQBJgvxGjE++RKRircYUZXeYhPZS3Z8rx95DVQfnnBAwk5GtjocUBS3zEHYJEn
+                        9XS9kTPMv0nZszHXgHWOyy8r7cgD4uhk8H1JXNI0DrKhNPfZ8LPHfCXh7XRyh49bVNCT0wjMYH7v
+                        9A1wlwqNP/RfmAfDGPUEdzIMPQatahgjaXUCgYXjrCgJXlXD8/nG8YG5zdo2fvAO4sKSaWSQxof+
+                        iWKMENKZaQ6NyICvCGPeDBKVOsd9os0o0Oydrw==
+                    </ds:SignatureValue>
+                    <ds:KeyInfo Id="xmldsig-beaae938-036c-4f38-9beb-504ab2b64c84-keyinfo">
+                        <ds:X509Data>
+                            <ds:X509Certificate>
+                                MIIIZTCCBk2gAwIBAgIILL6Iz8i97e0wDQYJKoZIhvcNAQELBQAwgbYxIzAhBgkqhkiG9w0BCQEW
+                                FGluZm9AYW5kZXNzY2QuY29tLmNvMSYwJAYDVQQDEx1DQSBBTkRFUyBTQ0QgUy5BLiBDbGFzZSBJ
+                                SSB2MjEwMC4GA1UECxMnRGl2aXNpb24gZGUgY2VydGlmaWNhY2lvbiBlbnRpZGFkIGZpbmFsMRIw
+                                EAYDVQQKEwlBbmRlcyBTQ0QxFDASBgNVBAcTC0JvZ290YSBELkMuMQswCQYDVQQGEwJDTzAeFw0y
+                                MTA0MzAwNTAwMDBaFw0yMzA0MzAwNDU5MDBaMIIBIjEfMB0GA1UECQwWQ0wgMjkgTk9SVEUgIyA2
+                                IEEgLSA0MDErMCkGCSqGSIb3DQEJARYcc2VndXJpZGFkdGkuZWJ6QGNhcnZhamFsLmNvbTEwMC4G
+                                A1UEAxMnQ0FSVkFKQUwgVEVDTk9MT0dJQSBZIFNFUlZJQ0lPUyAgUy5BLlMuMRMwEQYDVQQFEwo4
+                                OTAzMjExNTEwMRkwFwYDVQQMExBQRVJTT05BIEpVUklESUNBMTowOAYDVQQLEzFFbWl0aWRvIHBv
+                                ciBBbmRlcyBTQ0QgQWMgMjYgNjlDIDAzIFRvcnJlIEIgT2YgNzAxMQ0wCwYDVQQHEwRDQUxJMRgw
+                                FgYDVQQIEw9WQUxMRSBERUwgQ0FVQ0ExCzAJBgNVBAYTAkNPMIIBIjANBgkqhkiG9w0BAQEFAAOC
+                                AQ8AMIIBCgKCAQEA1M2vvM2Cv2NDikelj7FLhejGLydV+GDgXJ30E4HySBxqGQqLOt33SHFScbGU
+                                u8ixx2NNDXmd7qmSMEJQ4Sr/fc5c/REslcpqhVgqdK6YCbVvosjFtRjoaW7yqEjeSbr4I6wyJu+6
+                                BAlH26qhmFwCm9YhYjoho1x9B7My+dodZOkuqvtV+2kitrrEvwFo5c1+MlTRl4r6+6I+4MdUuRnU
+                                okp7LqwdrD9700EGgBQzVDwdgU+OO04WiHR5nO7Gdc4AauCjonm9M5fE0quqZZ3VGbqOEUJiClk2
+                                ep/HjrZezb0XTwVCyYnZTnvIvinAEyE/mk94//MEAEJ+D3CPGpUl4wIDAQABo4IDBjCCAwIwDAYD
+                                VR0TAQH/BAIwADAfBgNVHSMEGDAWgBQ6V1DQdxs+1ovq/5eZ1/+EAkgpDzA3BggrBgEFBQcBAQQr
+                                MCkwJwYIKwYBBQUHMAGGG2h0dHA6Ly9vY3NwLmFuZGVzc2NkLmNvbS5jbzAnBgNVHREEIDAegRxz
+                                ZWd1cmlkYWR0aS5lYnpAY2FydmFqYWwuY29tMIIB5AYDVR0gBIIB2zCCAdcwggHTBg0rBgEEAYH0
+                                SAECCQMCMIIBwDBCBggrBgEFBQcCARY2aHR0cHM6Ly93d3cuYW5kZXNzY2QuY29tLmNvL2RvY3Mv
+                                RFBDX0FuZGVzU0NEX1YzLjUucGRmMIIBeAYIKwYBBQUHAgIwggFqHoIBZgBMAGEAIAB1AHQAaQBs
+                                AGkAegBhAGMAaQDzAG4AIABkAGUAIABlAHMAdABlACAAYwBlAHIAdABpAGYAaQBjAGEAZABvACAA
+                                ZQBzAHQA4QAgAHMAdQBqAGUAdABhACAAYQAgAGwAYQBzACAAUABvAGwA7QB0AGkAYwBhAHMAIABk
+                                AGUAIABDAGUAcgB0AGkAZgBpAGMAYQBkAG8AIABkAGUAIABQAGUAcgBzAG8AbgBhACAASgB1AHIA
+                                7QBkAGkAYwBhACAAKABQAEMAKQAgAHkAIABEAGUAYwBsAGEAcgBhAGMAaQDzAG4AIABkAGUAIABQ
+                                AHIA4QBjAHQAaQBjAGEAcwAgAGQAZQAgAEMAZQByAHQAaQBmAGkAYwBhAGMAaQDzAG4AIAAoAEQA
+                                UABDACkAIABlAHMAdABhAGIAbABlAGMAaQBkAGEAcwAgAHAAbwByACAAQQBuAGQAZQBzACAAUwBD
+                                AEQwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMEMDkGA1UdHwQyMDAwLqAsoCqGKGh0dHA6
+                                Ly9jcmwuYW5kZXNzY2QuY29tLmNvL0NsYXNlSUl2Mi5jcmwwHQYDVR0OBBYEFCIAHWuyZY8CY+uL
+                                bQ7+6f6iYImOMA4GA1UdDwEB/wQEAwIE8DANBgkqhkiG9w0BAQsFAAOCAgEAneSFvjuvh+e0IjAH
+                                A+86QeCY+z8y/favMgHlZU6Mr2yHasyBw1PxByVS1E729mKQ6Pk88o30HSlYaL3DrXK4MwQI+V5q
+                                gwOgt20AicxJYpVQn+kroYCcdXqHVMd0Jya9wYin7G5no86cuqRJ72CdiIJ9RAZCBPDdMv37IfXS
+                                zkxsUULLQXpIh4f9mjVBNhCQVxdhcMUSML4xhnxh5wy1F1bs+pVh280L8fbi7SD41Hh74OtoPE1b
+                                DtxQTu2QmWv9DE5uEwGe+lJzZKFZj2p7jE8u78lAMhWymSG/MFpiqXd55GXTKwJLRJtwbJWwSYhH
+                                DqL5DC2pyuudcddWbfD1qbRo89WRGUS5L01dumgxoFXh5/oKc55y7+J42Wg40V4OlVqRA4CDsBNX
+                                txBShmEDlkAObAsn+FOLe8FKPg7KaB/ThMYB0uAaSm9omUQ4Jd4ZVZkMoqmSx23jToUnc+EtVXfG
+                                l0GU/Ya5GiVrDP+Ggn2gtEJi4ljw/DZR4zrz4lsz0wA+6Tpyt0HB0Oq1nRd+25pghPvtBdVoqtJQ
+                                XbQeN0hdFhxOT9WUyvyrOWZvQVKbx+SQ50cuR+MkjeyKemmGkKwTHj3K8vahYX3bo7Z8Gbsewdqz
+                                cbQXwwl0VhVS57BCADyPUydYDWvR9/FdTXlFbV4VZmOaOAdA2VyrboRCBng=
+                            </ds:X509Certificate>
+                        </ds:X509Data>
+                    </ds:KeyInfo>
+                    <ds:Object>
+                        <xades:QualifyingProperties
+                            Target="#xmldsig-beaae938-036c-4f38-9beb-504ab2b64c84">
+                            <xades:SignedProperties
+                                Id="xmldsig-beaae938-036c-4f38-9beb-504ab2b64c84-signedprops">
+                                <xades:SignedSignatureProperties>
+                                    <xades:SigningTime>2023-04-20T14:53:36.468-05:00</xades:SigningTime>
+                                    <xades:SigningCertificate>
+                                        <xades:Cert>
+                                            <xades:CertDigest>
+                                                <ds:DigestMethod
+                                                    Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+                                                <ds:DigestValue>
+                                                    Zq58xk2KisCZkuRY3//8olCkuwxAZDP75YtQE0ftMG4=</ds:DigestValue>
+                                            </xades:CertDigest>
+                                            <xades:IssuerSerial>
+                                                <ds:X509IssuerName>
+                                                    C=CO,L=Bogota D.C.,O=Andes
+                                                    SCD,OU=Division de certificacion entidad
+                                                    final,CN=CA ANDES SCD S.A. Clase II
+                                                    v2,1.2.840.113549.1.9.1=#1614696e666f40616e6465737363642e636f6d2e636f</ds:X509IssuerName>
+                                                <ds:X509SerialNumber>3224164809251352045</ds:X509SerialNumber>
+                                            </xades:IssuerSerial>
+                                        </xades:Cert>
+                                        <xades:Cert>
+                                            <xades:CertDigest>
+                                                <ds:DigestMethod
+                                                    Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+                                                <ds:DigestValue>
+                                                    PbsKGMpB0A2Y9NAz6F8LkU5nR+ONJASyK9D/bRTdbZ0=</ds:DigestValue>
+                                            </xades:CertDigest>
+                                            <xades:IssuerSerial>
+                                                <ds:X509IssuerName>
+                                                    C=CO,L=Bogota D.C.,O=Andes
+                                                    SCD,OU=Division de certificacion,CN=ROOT CA
+                                                    ANDES SCD
+                                                    S.A.,1.2.840.113549.1.9.1=#1614696e666f40616e6465737363642e636f6d2e636f</ds:X509IssuerName>
+                                                <ds:X509SerialNumber>4951343590990220136</ds:X509SerialNumber>
+                                            </xades:IssuerSerial>
+                                        </xades:Cert>
+                                        <xades:Cert>
+                                            <xades:CertDigest>
+                                                <ds:DigestMethod
+                                                    Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+                                                <ds:DigestValue>
+                                                    Cs7emRwtXWVYHJrqS9eXEXfUcFyJJBqFhDFOetHu8ts=</ds:DigestValue>
+                                            </xades:CertDigest>
+                                            <xades:IssuerSerial>
+                                                <ds:X509IssuerName>
+                                                    C=CO,L=Bogota D.C.,O=Andes
+                                                    SCD,OU=Division de certificacion,CN=ROOT CA
+                                                    ANDES SCD
+                                                    S.A.,1.2.840.113549.1.9.1=#1614696e666f40616e6465737363642e636f6d2e636f</ds:X509IssuerName>
+                                                <ds:X509SerialNumber>3184328748892787122</ds:X509SerialNumber>
+                                            </xades:IssuerSerial>
+                                        </xades:Cert>
+                                    </xades:SigningCertificate>
+                                    <xades:SignaturePolicyIdentifier>
+                                        <xades:SignaturePolicyId>
+                                            <xades:SigPolicyId>
+                                                <xades:Identifier>
+                                                    https://facturaelectronica.dian.gov.co/politicadefirma/v2/politicadefirmav2.pdf</xades:Identifier>
+                                            </xades:SigPolicyId>
+                                            <xades:SigPolicyHash>
+                                                <ds:DigestMethod
+                                                    Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+                                                <ds:DigestValue>
+                                                    dMoMvtcG5aIzgYo0tIsSQeVJBDnUnfSOfBpxXrmor0Y=</ds:DigestValue>
+                                            </xades:SigPolicyHash>
+                                        </xades:SignaturePolicyId>
+                                    </xades:SignaturePolicyIdentifier>
+                                    <xades:SignerRole>
+                                        <xades:ClaimedRoles>
+                                            <xades:ClaimedRole>third party</xades:ClaimedRole>
+                                        </xades:ClaimedRoles>
+                                    </xades:SignerRole>
+                                </xades:SignedSignatureProperties>
+                            </xades:SignedProperties>
+                        </xades:QualifyingProperties>
+                    </ds:Object>
+                </ds:Signature>
+            </ext:ExtensionContent>
+        </ext:UBLExtension>
+    </ext:UBLExtensions>
+    <cbc:UBLVersionID>UBL 2.1</cbc:UBLVersionID>
+    <cbc:CustomizationID schemeID="">10</cbc:CustomizationID>
+    <cbc:ProfileID>DIAN 2.1: Factura Electrónica de Venta</cbc:ProfileID>
+    <cbc:ProfileExecutionID>1</cbc:ProfileExecutionID>
+    <cbc:ID>706211356</cbc:ID>
+    <cbc:UUID schemeID="1" schemeName="CUFE-SHA384">
+        1a20ec184948eb64ea768cee9dd858215d8b476a29560675270a2309fa1e7f7fa9451411efc9982ec313bd1beafd36e7</cbc:UUID>
+    <cbc:IssueDate>2023-04-20</cbc:IssueDate>
+    <cbc:IssueTime>16:53:29-05:00</cbc:IssueTime>
+    <cbc:DueDate>2023-07-19</cbc:DueDate>
+    <cbc:InvoiceTypeCode>01</cbc:InvoiceTypeCode>
+    <cbc:Note>1_900.007.650-4\Autorretenedores Resolución 0003108 08/04/2010\IVA Régimen
+        Común\Resolución DIAN Factura Electrónica 18764021195135 Desde 15/11/2021 hasta 15/11/2023
+        Rango desde 706183546 hasta 706256002\Ica Itagui 2022 - Bogotá 4663 - Cartagena 4663 -
+        Envigado 881001</cbc:Note>
+    <cbc:Note>2_900210398-1\900210398-1</cbc:Note>
+    <cbc:Note>3_\\</cbc:Note>
+    <cbc:Note>4_A menos que el Comprador haya notificado a PPG lo contrario~ PPG entiende~ y el
+        Comprador manifiesta~ en la medida que sea requerido por todas las leyes aplicables que los
+        productos vendidos al amparo de esta factura (1) no serán utilizados con fines nucleares~
+        sistemas de cohetes~ vehículos aéreos no tripulados~ o en la aplicación de armas químicas o
+        biológicas y (2)~ si se ha proporcionado información de uso final o usuario final a PPG~ </cbc:Note>
+    <cbc:Note>4_no se desviará a otro uso o usuario. El Comprador se compromete a notificar
+        inmediatamente a PPG en caso de tener conocimiento de que el producto será utilizado para
+        alguno de estos usos finales restringidos o por una persona o entidad restringida.</cbc:Note>
+    <cbc:Note>5_Esta Factura de venta constituye un título valor conforme a los requisitos del
+        artículo 774 del Código de Comercio y se entenderá irrevocablemente aceptada si el
+        adquiriente/pagador no reclame en contra de su contenido dentro de los tres (3) días hábiles
+        siguientes a la recepción de la factura electrónica como titulo valor~ el incumplimiento en
+        el pago causará intereses mora a la tasa máxima permitida por ley</cbc:Note>
+    <cbc:Note>6_Pagos únicamente a nombre de PPG Industries Colombia Ltda</cbc:Note>
+    <cbc:Note>7_Transferencia Bancaria BBVA NY USD\Transferencia Bancolombia\Transferencia BBVA
+        Colombia</cbc:Note>
+    <cbc:Note>8_Banco Bilbao Vizcaya Argentaria SA - 1345 Avenue of the America~ 44Th FL New York.
+        NY 10105 - USD - No Cuenta 538 959 2383 - Swift BBVAUS33XXX - CHIPS ABA 0184 - FED ABA
+        026001847\Cuenta Corriente No 245 760 271 28\Cuenta Corriente No 032 001 182</cbc:Note>
+    <cbc:Note>9_Son: TRECE MILLONES DOSCIENTOS OCHENTA MIL CUATROCIENTOS PESOS</cbc:Note>
+    <cbc:Note>10_OC-7859 / CONTACTO ANDRES FELIPE TRIGOS / PSX700~ EL CLIENTE RECOGE EN ITAGUI EL
+        DIA JUEVES 20</cbc:Note>
+    <cbc:Note>11_293.1 KG\269.2 KG\</cbc:Note>
+    <cbc:Note>CTS1_ZH INGENIEROS SAS|||||||90 DIAS</cbc:Note>
+    <cbc:Note>El ejemplar que reciba la DIAN se utilizará sólo para fines de control, verificación y
+        fiscalización</cbc:Note>
+    <cbc:Note>
+        NumFac: 706211356 FecFac: 2023-04-20 HorFac: 16:53:29-05:00 NitFac: 900007650 DocAdq:
+        900210398 ValFac: 11160000.00 ValIva: 2120400.00 ValOtroIm: 0.00 ValTolFac: 13280400.00
+        CUFE:
+        1a20ec184948eb64ea768cee9dd858215d8b476a29560675270a2309fa1e7f7fa9451411efc9982ec313bd1beafd36e7
+        https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=1a20ec184948eb64ea768cee9dd858215d8b476a29560675270a2309fa1e7f7fa9451411efc9982ec313bd1beafd36e7</cbc:Note>
+    <cbc:Note>
+        NumFac: 706211356 FecFac: 2023-04-20 HorFac: 16:53:29-05:00 ValFac: 13280400.00
+        CodImp1: 01 ValImp1: 2120400.00 CodImp2: 02 ValImp2: 0.00 CodImp3: 03 ValImp3: 0.00 ValTot:
+        11160000.00 NitOFE: 900007650 NumAdq: 900210398 TipoAmbiente: 1 String:
+        7062113562023-04-2016:53:29-05:0011160000.00012120400.00040.00030.0013280400.009000076509002103981</cbc:Note>
+    <cbc:DocumentCurrencyCode>COP</cbc:DocumentCurrencyCode>
+    <cbc:LineCountNumeric>1</cbc:LineCountNumeric>
+    <cac:OrderReference>
+        <cbc:ID>OC-7859</cbc:ID>
+        <cbc:SalesOrderID>50077414</cbc:SalesOrderID>
+        <cbc:IssueDate>2023-04-18</cbc:IssueDate>
+        <cbc:IssueTime>10:24:22</cbc:IssueTime>
+    </cac:OrderReference>
+    <cac:AdditionalDocumentReference>
+        <cbc:ID>R-0000-00186602</cbc:ID>
+        <cbc:DocumentTypeCode>AAJ</cbc:DocumentTypeCode>
+        <cbc:DocumentType>Orden de prueba Entrega (remision)</cbc:DocumentType>
+    </cac:AdditionalDocumentReference>
+    <cac:AccountingSupplierParty>
+        <cbc:AdditionalAccountID>1</cbc:AdditionalAccountID>
+        <cac:Party>
+            <cac:PartyName>
+                <cbc:Name>PPG INDUSTRIES COLOMBIA LTDA.</cbc:Name>
+            </cac:PartyName>
+            <cac:PhysicalLocation>
+                <cac:Address>
+                    <cbc:ID>05360</cbc:ID>
+                    <cbc:CityName>ITAGUI</cbc:CityName>
+                    <cbc:PostalZone>055412</cbc:PostalZone>
+                    <cbc:CountrySubentity>Antioquia</cbc:CountrySubentity>
+                    <cbc:CountrySubentityCode>05</cbc:CountrySubentityCode>
+                    <cac:AddressLine>
+                        <cbc:Line>Calle 51 40-13</cbc:Line>
+                    </cac:AddressLine>
+                    <cac:Country>
+                        <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+                        <cbc:Name languageID="es">Colombia</cbc:Name>
+                    </cac:Country>
+                </cac:Address>
+            </cac:PhysicalLocation>
+            <cac:PartyTaxScheme>
+                <cbc:RegistrationName>PPG INDUSTRIES COLOMBIA LTDA.</cbc:RegistrationName>
+                <cbc:CompanyID schemeAgencyID="195"
+                    schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)"
+                    schemeID="4" schemeName="31">900007650</cbc:CompanyID>
+                <cbc:TaxLevelCode listName="No aplica">O-13;O-15</cbc:TaxLevelCode>
+                <cac:RegistrationAddress>
+                    <cbc:ID>05360</cbc:ID>
+                    <cbc:CityName>ITAGUI</cbc:CityName>
+                    <cbc:PostalZone>055412</cbc:PostalZone>
+                    <cbc:CountrySubentity>Antioquia</cbc:CountrySubentity>
+                    <cbc:CountrySubentityCode>05</cbc:CountrySubentityCode>
+                    <cac:AddressLine>
+                        <cbc:Line>X</cbc:Line>
+                    </cac:AddressLine>
+                    <cac:Country>
+                        <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+                        <cbc:Name languageID="es">Colombia</cbc:Name>
+                    </cac:Country>
+                </cac:RegistrationAddress>
+                <cac:TaxScheme>
+                    <cbc:ID>01</cbc:ID>
+                    <cbc:Name>IVA</cbc:Name>
+                </cac:TaxScheme>
+            </cac:PartyTaxScheme>
+            <cac:PartyLegalEntity>
+                <cbc:RegistrationName>PPG INDUSTRIES COLOMBIA LTDA.</cbc:RegistrationName>
+                <cbc:CompanyID schemeAgencyID="195"
+                    schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)"
+                    schemeID="4" schemeName="31">900007650</cbc:CompanyID>
+            </cac:PartyLegalEntity>
+            <cac:Contact>
+                <cbc:Name>DIEGO ARMANDO RIANO SUSANO</cbc:Name>
+                <cbc:ElectronicMail>ppgcolombia.clientes@ppg.com</cbc:ElectronicMail>
+            </cac:Contact>
+        </cac:Party>
+    </cac:AccountingSupplierParty>
+    <cac:AccountingCustomerParty>
+        <cbc:AdditionalAccountID>1</cbc:AdditionalAccountID>
+        <cac:Party>
+            <cac:PartyName>
+                <cbc:Name>ZH INGENIEROS SAS</cbc:Name>
+            </cac:PartyName>
+            <cac:PhysicalLocation>
+                <cac:Address>
+                    <cbc:ID>11001</cbc:ID>
+                    <cbc:CityName>BOGOTÁ~ D.C.</cbc:CityName>
+                    <cbc:PostalZone>111111</cbc:PostalZone>
+                    <cbc:CountrySubentity>Bogotá</cbc:CountrySubentity>
+                    <cbc:CountrySubentityCode>11</cbc:CountrySubentityCode>
+                    <cac:AddressLine>
+                        <cbc:Line>CL 138 57 75 OF 401</cbc:Line>
+                    </cac:AddressLine>
+                    <cac:Country>
+                        <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+                        <cbc:Name languageID="es">Colombia</cbc:Name>
+                    </cac:Country>
+                </cac:Address>
+            </cac:PhysicalLocation>
+            <cac:PartyTaxScheme>
+                <cbc:RegistrationName>ZH INGENIEROS SAS</cbc:RegistrationName>
+                <cbc:CompanyID schemeAgencyID="195"
+                    schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)"
+                    schemeID="1" schemeName="31">900210398</cbc:CompanyID>
+                <cbc:TaxLevelCode listName="No aplica">R-99-PN</cbc:TaxLevelCode>
+                <cac:RegistrationAddress>
+                    <cbc:ID>11001</cbc:ID>
+                    <cbc:CityName>BOGOTÁ~ D.C.</cbc:CityName>
+                    <cbc:PostalZone>111111</cbc:PostalZone>
+                    <cbc:CountrySubentity>Bogotá</cbc:CountrySubentity>
+                    <cbc:CountrySubentityCode>11</cbc:CountrySubentityCode>
+                    <cac:AddressLine>
+                        <cbc:Line />
+                    </cac:AddressLine>
+                    <cac:Country>
+                        <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+                        <cbc:Name languageID="es">Colombia</cbc:Name>
+                    </cac:Country>
+                </cac:RegistrationAddress>
+                <cac:TaxScheme>
+                    <cbc:ID>01</cbc:ID>
+                    <cbc:Name>IVA</cbc:Name>
+                </cac:TaxScheme>
+            </cac:PartyTaxScheme>
+            <cac:PartyLegalEntity>
+                <cbc:RegistrationName>ZH INGENIEROS SAS</cbc:RegistrationName>
+                <cbc:CompanyID schemeAgencyID="195"
+                    schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)"
+                    schemeID="1" schemeName="31">900210398</cbc:CompanyID>
+                <cac:ShareholderParty>
+                    <cbc:PartecipationPercent>100</cbc:PartecipationPercent>
+                </cac:ShareholderParty>
+            </cac:PartyLegalEntity>
+            <cac:Contact>
+                <cbc:Name>ZH INGENIEROS SAS</cbc:Name>
+                <cbc:ElectronicMail>facturacion@zhingenieros.com</cbc:ElectronicMail>
+            </cac:Contact>
+        </cac:Party>
+        <cac:DeliveryContact>
+            <cbc:Name>ZH INGENIEROS SAS</cbc:Name>
+            <cbc:ElectronicMail>facturacion@zhingenieros.com</cbc:ElectronicMail>
+        </cac:DeliveryContact>
+    </cac:AccountingCustomerParty>
+    <cac:Delivery>
+        <cbc:ActualDeliveryDate>2023-04-22</cbc:ActualDeliveryDate>
+        <cac:DeliveryAddress>
+            <cbc:ID>47001</cbc:ID>
+            <cbc:CityName>SANTA MARTA</cbc:CityName>
+            <cbc:PostalZone>000000</cbc:PostalZone>
+            <cbc:CountrySubentity>Magdalena</cbc:CountrySubentity>
+            <cbc:CountrySubentityCode>47</cbc:CountrySubentityCode>
+            <cac:AddressLine>
+                <cbc:Line>CL 87 No. 2-30 APTO 2A CONJUNTO MICRO REFUGIO - SECTOR POZOS COLORADOS</cbc:Line>
+            </cac:AddressLine>
+            <cac:Country>
+                <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+                <cbc:Name languageID="es">Colombia</cbc:Name>
+            </cac:Country>
+        </cac:DeliveryAddress>
+        <cac:DeliveryParty>
+            <cac:PartyName>
+                <cbc:Name>PPG INDUSTRIES COLOMBIA LTDA.</cbc:Name>
+            </cac:PartyName>
+            <cac:PhysicalLocation>
+                <cac:Address>
+                    <cbc:ID>05360</cbc:ID>
+                    <cbc:CityName>ITAGUI</cbc:CityName>
+                    <cbc:PostalZone>055412</cbc:PostalZone>
+                    <cbc:CountrySubentity>Antioquia</cbc:CountrySubentity>
+                    <cbc:CountrySubentityCode>05</cbc:CountrySubentityCode>
+                    <cac:AddressLine>
+                        <cbc:Line>Calle 51 40-13</cbc:Line>
+                    </cac:AddressLine>
+                    <cac:Country>
+                        <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+                        <cbc:Name languageID="es">Colombia</cbc:Name>
+                    </cac:Country>
+                </cac:Address>
+            </cac:PhysicalLocation>
+            <cac:PartyTaxScheme>
+                <cbc:RegistrationName>PPG INDUSTRIES COLOMBIA LTDA.</cbc:RegistrationName>
+                <cbc:CompanyID schemeAgencyID="195"
+                    schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)"
+                    schemeID="4" schemeName="31">900007650</cbc:CompanyID>
+                <cbc:TaxLevelCode listName="No aplica">O-13;O-15</cbc:TaxLevelCode>
+                <cac:RegistrationAddress>
+                    <cbc:ID>05360</cbc:ID>
+                    <cbc:CityName>ITAGUI</cbc:CityName>
+                    <cbc:CountrySubentity>Antioquia</cbc:CountrySubentity>
+                    <cbc:CountrySubentityCode>05</cbc:CountrySubentityCode>
+                    <cac:AddressLine>
+                        <cbc:Line>Calle 51 40-13</cbc:Line>
+                    </cac:AddressLine>
+                    <cac:Country>
+                        <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+                        <cbc:Name languageID="es">Colombia</cbc:Name>
+                    </cac:Country>
+                </cac:RegistrationAddress>
+                <cac:TaxScheme>
+                    <cbc:ID>01</cbc:ID>
+                    <cbc:Name>IVA</cbc:Name>
+                </cac:TaxScheme>
+            </cac:PartyTaxScheme>
+        </cac:DeliveryParty>
+    </cac:Delivery>
+    <cac:PaymentMeans>
+        <cbc:ID schemeID="">2</cbc:ID>
+        <cbc:PaymentMeansCode>41</cbc:PaymentMeansCode>
+        <cbc:PaymentDueDate>2023-07-19</cbc:PaymentDueDate>
+    </cac:PaymentMeans>
+    <cac:TaxTotal>
+        <cbc:TaxAmount currencyID="COP">2120400</cbc:TaxAmount>
+        <cbc:RoundingAmount currencyID="COP">0.00</cbc:RoundingAmount>
+        <cac:TaxSubtotal>
+            <cbc:TaxableAmount currencyID="COP">11160000</cbc:TaxableAmount>
+            <cbc:TaxAmount currencyID="COP">2120400</cbc:TaxAmount>
+            <cac:TaxCategory>
+                <cbc:Percent>19.00</cbc:Percent>
+                <cac:TaxScheme>
+                    <cbc:ID>01</cbc:ID>
+                    <cbc:Name>IVA</cbc:Name>
+                </cac:TaxScheme>
+            </cac:TaxCategory>
+        </cac:TaxSubtotal>
+    </cac:TaxTotal>
+    <cac:LegalMonetaryTotal>
+        <cbc:LineExtensionAmount currencyID="COP">11160000</cbc:LineExtensionAmount>
+        <cbc:TaxExclusiveAmount currencyID="COP">11160000</cbc:TaxExclusiveAmount>
+        <cbc:TaxInclusiveAmount currencyID="COP">13280400</cbc:TaxInclusiveAmount>
+        <cbc:PayableAmount currencyID="COP">13280400</cbc:PayableAmount>
+    </cac:LegalMonetaryTotal>
+    <cac:InvoiceLine>
+        <cbc:ID schemeID="">1</cbc:ID>
+        <cbc:Note>ITE_10||UN</cbc:Note>
+        <cbc:Note>ITE_21|11160000</cbc:Note>
+        <cbc:Note>ITE_22|COP</cbc:Note>
+        <cbc:InvoicedQuantity unitCode="S7">10</cbc:InvoicedQuantity>
+        <cbc:LineExtensionAmount currencyID="COP">11160000</cbc:LineExtensionAmount>
+        <cac:TaxTotal>
+            <cbc:TaxAmount currencyID="COP">2120400</cbc:TaxAmount>
+            <cbc:RoundingAmount currencyID="COP">0.00</cbc:RoundingAmount>
+            <cac:TaxSubtotal>
+                <cbc:TaxableAmount currencyID="COP">11160000</cbc:TaxableAmount>
+                <cbc:TaxAmount currencyID="COP">2120400</cbc:TaxAmount>
+                <cac:TaxCategory>
+                    <cbc:Percent>19.00</cbc:Percent>
+                    <cac:TaxScheme>
+                        <cbc:ID>01</cbc:ID>
+                        <cbc:Name>IVA</cbc:Name>
+                    </cac:TaxScheme>
+                </cac:TaxCategory>
+            </cac:TaxSubtotal>
+        </cac:TaxTotal>
+        <cac:Item>
+            <cbc:Description>SET NOVAGUARD 840 SET CREAM 3012002200</cbc:Description>
+            <cac:SellersItemIdentification>
+                <cbc:ID>S00237775</cbc:ID>
+            </cac:SellersItemIdentification>
+            <cac:StandardItemIdentification>
+                <cbc:ID schemeAgencyID="" schemeID="999" schemeName="">S00237775</cbc:ID>
+            </cac:StandardItemIdentification>
+        </cac:Item>
+        <cac:Price>
+            <cbc:PriceAmount currencyID="COP">1116000</cbc:PriceAmount>
+            <cbc:BaseQuantity unitCode="S7">10</cbc:BaseQuantity>
+        </cac:Price>
+    </cac:InvoiceLine>
+</Invoice>
+]]>
