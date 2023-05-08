@@ -27,32 +27,21 @@ export class AppComponent {
           xmlContent,
           'application/xml'
         );
-        JSON.parentDocumentID =
-          xmlDoc.querySelector('ParentDocumentID').textContent;
+        JSON.parentDocumentID = xmlDoc.querySelector('ParentDocumentID').textContent;
         JSON.ublExtensions = xmlDoc.querySelector('UBLExtensions').textContent;
-        JSON.customizationID =
-          xmlDoc.querySelector('CustomizationID').textContent;
+        JSON.customizationID = xmlDoc.querySelector('CustomizationID').textContent;
         JSON.profileID = xmlDoc.querySelector('ProfileID').textContent;
-        JSON.profileExecutionID =
-          xmlDoc.querySelector('ProfileExecutionID').textContent;
+        JSON.profileExecutionID = xmlDoc.querySelector('ProfileExecutionID').textContent;
         JSON.id = xmlDoc.querySelector('ID').textContent;
         JSON.issueDate = xmlDoc.querySelector('IssueDate').textContent;
         JSON.issueTime = xmlDoc.querySelector('IssueTime').textContent;
         JSON.documentType = xmlDoc.querySelector('DocumentType').textContent;
-        JSON.parentDocumentID =
-          xmlDoc.querySelector('ParentDocumentID').textContent;
-        JSON.senderParty = {
-          PartyTaxScheme: xmlDoc.querySelector('PartyTaxScheme').textContent,
-        };
-        JSON.senderParty.registrationName =
-          xmlDoc.querySelector('RegistrationName').textContent;
-        JSON.senderParty.companyID =
-          xmlDoc.querySelector('CompanyID').textContent;
-        JSON.senderParty.taxLevelCode =
-          xmlDoc.querySelector('TaxLevelCode').textContent;
-        JSON.senderParty.ID = xmlDoc.querySelector(
-          'SenderParty PartyTaxScheme TaxScheme ID'
-        ).textContent;
+        JSON.parentDocumentID = xmlDoc.querySelector('ParentDocumentID').textContent;
+        JSON.senderParty = { PartyTaxScheme: xmlDoc.querySelector('PartyTaxScheme').textContent, };
+        JSON.senderParty.registrationName = xmlDoc.querySelector('RegistrationName').textContent;
+        JSON.senderParty.companyID = xmlDoc.querySelector('CompanyID').textContent;
+        JSON.senderParty.taxLevelCode = xmlDoc.querySelector('TaxLevelCode').textContent;
+        JSON.senderParty.ID = xmlDoc.querySelector('SenderParty PartyTaxScheme TaxScheme ID').textContent;
 
         const xmlDoc2 = parse.parseFromString(
           xmlDoc
@@ -61,18 +50,69 @@ export class AppComponent {
           'text/xml'
         );
 
+        JSON.paymentDueDate = xmlDoc2.querySelector('PaymentMeans PaymentDueDate').textContent;
+        JSON.companyID = xmlDoc2.querySelector('CompanyID').textContent;
+        JSON.note = xmlDoc2.querySelector('Note').textContent;
+
+        JSON.legalMonetaryTotal = { lineExtensionAmount: xmlDoc2.querySelector('LineExtensionAmount').textContent, };
+        JSON.legalMonetaryTotal.taxExclusiveAmount = xmlDoc2.querySelector('TaxExclusiveAmount').textContent;
+        JSON.legalMonetaryTotal.taxInclusiveAmount = xmlDoc2.querySelector('TaxInclusiveAmount').textContent;
+        JSON.legalMonetaryTotal.allowanceTotalAmount = xmlDoc2.querySelector('AllowanceTotalAmount').textContent;
+        JSON.legalMonetaryTotal.chargeTotalAmount = xmlDoc2.querySelector('ChargeTotalAmount').textContent;
+        JSON.legalMonetaryTotal.prepaidAmount = xmlDoc2.querySelector('PrepaidAmount').textContent;
+        JSON.legalMonetaryTotal.payableAmount = xmlDoc2.querySelector('PayableAmount').textContent;
+        JSON.taxTotal = xmlDoc2.querySelector('TaxTotal TaxAmount').textContent;
+
+        JSON.accountingSupplierParty = { additionalAccountID: xmlDoc2.querySelector('AdditionalAccountID').textContent, };
+        JSON.accountingSupplierParty.name = xmlDoc2.querySelector('PartyName Name').textContent;
+        JSON.accountingSupplierParty.idAddress = xmlDoc2.querySelector('Address ID').textContent;
+        JSON.accountingSupplierParty.cityName = xmlDoc2.querySelector('Address CityName').textContent;
+        JSON.accountingSupplierParty.postalZone = xmlDoc2.querySelector('Address PostalZone').textContent;
+        JSON.accountingSupplierParty.countrySubentity = xmlDoc2.querySelector('Address CountrySubentity').textContent;
+        JSON.accountingSupplierParty.countrySubentityCode = xmlDoc2.querySelector('Address CountrySubentityCode').textContent;
+        JSON.accountingSupplierParty.cityName = xmlDoc2.querySelector('Address CityName').textContent;
+        JSON.accountingSupplierParty.country = xmlDoc2.querySelector('Address Country ').textContent;
+        JSON.accountingSupplierParty.identificationCode = xmlDoc2.querySelector('Address Country IdentificationCode ').textContent;
+        JSON.accountingSupplierParty.name = xmlDoc2.querySelector('Address Country Name').textContent;
+
+        JSON.accountingSupplierParty.registrationName = xmlDoc2.querySelector('PartyTaxScheme RegistrationName').textContent;
+        JSON.accountingSupplierParty.companyID = xmlDoc2.querySelector('PartyTaxScheme CompanyID').textContent;
+
+        JSON.accountingSupplierParty.taxLevelCodeRegistrationAddress = xmlDoc2.querySelector('PartyTaxScheme RegistrationAddress ID').textContent;
+        JSON.accountingSupplierParty.idRegistrationAddress = xmlDoc2.querySelector('PartyTaxScheme RegistrationAddress ID').textContent;
+        JSON.accountingSupplierParty.postalZoneRegistrationAddress = xmlDoc2.querySelector('PartyTaxScheme RegistrationAddress PostalZone').textContent;
+        JSON.accountingSupplierParty.countrySubentityRegistrationAddress = xmlDoc2.querySelector('PartyTaxScheme RegistrationAddress CountrySubentity').textContent;
+        JSON.accountingSupplierParty.countrySubentityCodeRegistrationAddress = xmlDoc2.querySelector('PartyTaxScheme RegistrationAddress CountrySubentityCode').textContent;
+        JSON.accountingSupplierParty.lineRegistrationAddress = xmlDoc2.querySelector('PartyTaxScheme RegistrationAddress AddressLine Line').textContent;
+        JSON.accountingSupplierParty.identificationCodeRegistrationAddress = xmlDoc2.querySelector('PartyTaxScheme RegistrationAddress Country IdentificationCode').textContent;
+        JSON.accountingSupplierParty.nameRegistrationAddress = xmlDoc2.querySelector('PartyTaxScheme RegistrationAddress Country Name').textContent;
+
+        JSON.accountingSupplierParty.idTaxScheme = xmlDoc2.querySelector('TaxScheme ID').textContent;
+        JSON.accountingSupplierParty.nameTaxScheme = xmlDoc2.querySelector('TaxScheme Name').textContent;
+
+        JSON.accountingSupplierParty.registrationNamePartyLegalEntity = xmlDoc2.querySelector('PartyLegalEntity RegistrationName').textContent;
+        JSON.accountingSupplierParty.companyIDPartyLegalEntity = xmlDoc2.querySelector('PartyLegalEntity CompanyID').textContent;
+        JSON.accountingSupplierParty.idPartyLegalEntity = xmlDoc2.querySelector('PartyLegalEntity CorporateRegistrationScheme ID').textContent;
+
+        JSON.accountingSupplierParty.nameContact = xmlDoc2.querySelector('Contact Name').textContent;
+        JSON.accountingSupplierParty.telephoneContact = xmlDoc2.querySelector('Contact Telephone').textContent;
+        JSON.accountingSupplierParty.electronicMailContact = xmlDoc2.querySelector('Contact ElectronicMail').textContent;
+        
+        JSON.withholdingTaxTotal = xmlDoc2.querySelector('WithholdingTaxTotal TaxAmount').textContent;
+
+
+
+
         const itemsXML = xmlDoc2.querySelectorAll('InvoiceLine');
         itemsXML.forEach(elemento => {
-          // console.log(elemento.querySelector("Item Description").textContent)
+          // console.log(elemento)
           items.push({
             description: elemento.querySelector("Item Description").textContent,
             standardItemIdentification: elemento.querySelector("StandardItemIdentification ID").textContent,
             priceAmount: elemento.querySelector("Price PriceAmount").textContent,
             baseQuantity: elemento.querySelector("Price BaseQuantity").textContent,
             taxSubtotal: elemento.querySelector("TaxSubtotal TaxableAmount").textContent,
-
-            
-            // registrationName: elemento.querySelector("PartyName Name").textContent,
+            taxAmount: elemento.querySelector("TaxTotal TaxAmount").textContent,
           })
         });
 
