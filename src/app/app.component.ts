@@ -67,6 +67,12 @@ export class AppComponent {
           items.push({
             description: elemento.querySelector("Item Description").textContent,
             standardItemIdentification: elemento.querySelector("StandardItemIdentification ID").textContent,
+            priceAmount: elemento.querySelector("Price PriceAmount").textContent,
+            baseQuantity: elemento.querySelector("Price BaseQuantity").textContent,
+            taxSubtotal: elemento.querySelector("TaxSubtotal TaxableAmount").textContent,
+
+            
+            // registrationName: elemento.querySelector("PartyName Name").textContent,
           })
         });
 
