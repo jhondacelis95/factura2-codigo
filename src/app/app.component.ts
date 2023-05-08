@@ -22,7 +22,6 @@ export class AppComponent {
       const reader = new FileReader();
       reader.onload = () => {
         const xmlContent = reader.result as string;
-        // Hacer algo con el contenido del archivo XML, como convertirlo a JSON
         const xmlDoc = new DOMParser().parseFromString(
           xmlContent,
           'application/xml'
@@ -57,9 +56,9 @@ export class AppComponent {
         JSON.legalMonetaryTotal = { lineExtensionAmount: xmlDoc2.querySelector('LineExtensionAmount').textContent, };
         JSON.legalMonetaryTotal.taxExclusiveAmount = xmlDoc2.querySelector('TaxExclusiveAmount').textContent;
         JSON.legalMonetaryTotal.taxInclusiveAmount = xmlDoc2.querySelector('TaxInclusiveAmount').textContent;
-        JSON.legalMonetaryTotal.allowanceTotalAmount = xmlDoc2.querySelector('AllowanceTotalAmount').textContent;
-        JSON.legalMonetaryTotal.chargeTotalAmount = xmlDoc2.querySelector('ChargeTotalAmount').textContent;
-        JSON.legalMonetaryTotal.prepaidAmount = xmlDoc2.querySelector('PrepaidAmount').textContent;
+        JSON.legalMonetaryTotal.allowanceTotalAmount = xmlDoc2.querySelector('AllowanceTotalAmount')?.textContent;
+        JSON.legalMonetaryTotal.chargeTotalAmount = xmlDoc2.querySelector('ChargeTotalAmount')?.textContent;
+        JSON.legalMonetaryTotal.prepaidAmount = xmlDoc2.querySelector('PrepaidAmount')?.textContent;
         JSON.legalMonetaryTotal.payableAmount = xmlDoc2.querySelector('PayableAmount').textContent;
 
         JSON.taxTotal = xmlDoc2.querySelector('TaxTotal TaxAmount').textContent;
@@ -94,13 +93,13 @@ export class AppComponent {
 
         JSON.partyLegalEntity = { registrationName: xmlDoc.querySelector('RegistrationName').textContent, };
         JSON.partyLegalEntity.companyID = xmlDoc2.querySelector('PartyLegalEntity CompanyID').textContent;
-        JSON.partyLegalEntity.id = xmlDoc2.querySelector('PartyLegalEntity CorporateRegistrationScheme ID').textContent;
+        JSON.partyLegalEntity.id = xmlDoc2.querySelector('PartyLegalEntity CorporateRegistrationScheme ID')?.textContent;
 
         JSON.accountingSupplierParty.nameContact = xmlDoc2.querySelector('Contact Name').textContent;
-        JSON.accountingSupplierParty.telephoneContact = xmlDoc2.querySelector('Contact Telephone').textContent;
+        JSON.accountingSupplierParty.telephoneContact = xmlDoc2.querySelector('Contact Telephone')?.textContent;
         JSON.accountingSupplierParty.electronicMailContact = xmlDoc2.querySelector('Contact ElectronicMail').textContent;
 
-        JSON.withholdingTaxTotal = xmlDoc2.querySelector('WithholdingTaxTotal TaxAmount').textContent;
+        JSON.withholdingTaxTotal = xmlDoc2.querySelector('WithholdingTaxTotal TaxAmount')?.textContent;
 
         JSON.paymentMeans = { paymentMeans: xmlDoc2.querySelector('PaymentMeans').textContent, };
         JSON.paymentMeans.id = xmlDoc2.querySelector('PaymentMeans ID').textContent;
@@ -110,7 +109,6 @@ export class AppComponent {
         
         const itemsXML = xmlDoc2.querySelectorAll('InvoiceLine');
         itemsXML.forEach(elemento => {
-          // console.log(elemento)
           items.push({
             description: elemento.querySelector("Item Description").textContent,
             standardItemIdentification: elemento.querySelector("StandardItemIdentification ID").textContent,
