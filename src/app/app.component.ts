@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
+import * as pdf2html from 'pdf2html';
+
 
 @Component({
   selector: 'app-root',
@@ -9,6 +11,34 @@ import autoTable from 'jspdf-autotable';
 })
 export class AppComponent {
   title = 'Proyect1';
+
+async pdfToHtml (){
+
+  const text = await Promise.resolve('sample.pdf');
+console.log(text);
+  
+  const fileInput = document.createElement('input');
+  fileInput.type = 'file';
+  fileInput.accept = 'application/pdf';
+  fileInput.addEventListener('change', () => {
+    const file = fileInput.files[0];
+    const reader = new FileReader();
+    reader.onload = () => {
+      const xmlContent = reader.result as string;
+      const xmlDoc = new DOMParser().parseFromString(
+        xmlContent,
+        'application/xml'
+        
+      );
+      console.log(this.pdfToHtml);
+      
+    };
+    reader.readAsText(file);
+  });
+  fileInput.click();
+}
+
+
   xmlajson() {
     console.log('Hola Mundo');
     const items = []
