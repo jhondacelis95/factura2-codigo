@@ -78,6 +78,22 @@ export class AppComponent {
         JSON.accountingSupplierParty.registrationName = xmlDoc2.querySelector('PartyTaxScheme RegistrationName').textContent;
         JSON.accountingSupplierParty.companyID = xmlDoc2.querySelector('PartyTaxScheme CompanyID').textContent;
 
+        JSON.accountingCustomerParty = { additionalAccountID: xmlDoc2.querySelector('AdditionalAccountID').textContent, };
+        JSON.accountingCustomerParty.name = xmlDoc2.querySelector('PartyName Name').textContent;
+        JSON.accountingCustomerParty.idAddress = xmlDoc2.querySelector('Address ID').textContent;
+        JSON.accountingCustomerParty.cityName = xmlDoc2.querySelector('Address CityName').textContent;
+        JSON.accountingCustomerParty.postalZone = xmlDoc2.querySelector('Address PostalZone').textContent;
+        JSON.accountingCustomerParty.countrySubentity = xmlDoc2.querySelector('Address CountrySubentity').textContent;
+        JSON.accountingCustomerParty.countrySubentityCode = xmlDoc2.querySelector('Address CountrySubentityCode').textContent;
+        JSON.accountingCustomerParty.cityName = xmlDoc2.querySelector('Address CityName').textContent;
+        JSON.accountingCustomerParty.country = xmlDoc2.querySelector('Address Country ').textContent;
+        JSON.accountingCustomerParty.identificationCode = xmlDoc2.querySelector('Address Country IdentificationCode ').textContent;
+        JSON.accountingCustomerParty.name = xmlDoc2.querySelector('Address Country Name').textContent;
+
+        JSON.accountingCustomerParty.registrationName = xmlDoc2.querySelector('PartyTaxScheme RegistrationName').textContent;
+        JSON.accountingCustomerParty.companyID = xmlDoc2.querySelector('PartyTaxScheme CompanyID').textContent;
+
+
         JSON.registrationAddress = { partyTaxScheme: xmlDoc.querySelector('PartyTaxScheme').textContent, };
         JSON.registrationAddress.taxLevelCode = xmlDoc2.querySelector('PartyTaxScheme RegistrationAddress ID').textContent;
         JSON.registrationAddress.id = xmlDoc2.querySelector('PartyTaxScheme RegistrationAddress ID').textContent;
