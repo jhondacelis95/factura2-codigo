@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
-import * as pdf2html from 'pdf2html';
+// import * as pdf2html from 'pdf2html';
+import * as pdfjsLib from 'pdfjs-dist';
+import * as pdfjsWorker from 'pdfjs-dist/build/pdf.worker.entry';
+pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;
 
 
 @Component({
@@ -12,33 +15,31 @@ import * as pdf2html from 'pdf2html';
 export class AppComponent {
   title = 'Proyect1';
 
-async pdfToHtml (){
-
-  const text = await Promise.resolve('sample.pdf');
-console.log(text);
-  
-  const fileInput = document.createElement('input');
-  fileInput.type = 'file';
-  fileInput.accept = 'application/pdf';
-  fileInput.addEventListener('change', () => {
-    const file = fileInput.files[0];
-    const reader = new FileReader();
-    reader.onload = () => {
-      const xmlContent = reader.result as string;
-      const xmlDoc = new DOMParser().parseFromString(
-        xmlContent,
-        'application/xml'
-        
-      );
-      console.log(this.pdfToHtml);
+  pdfToHtml() {
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = 'application/pdf';
+    fileInput.addEventListener('change', async () => {
+      const file = fileInput.files[0];
+      const reader = new FileReader();
+      reader.readAsArrayBuffer(file); // Leer el archivo como un búfer binario
+      reader.onload = async () => {
+        const pdfData = reader.result; // Obtener los datos binarios del archivo
+        const pdf = await pdfjsLib.getDocument({ data: pdfData }).promise;
+    
+        // Recorrer las páginas del PDF y extraer información
+        for (let i = 1; i <= pdf.numPages; i++) {
+          const page = await pdf.getPage(i);
+          const content = await page.getTextContent();
+          console.log(`Contenido de la página ${i}:`, content);
+          // Aquí podrías generar HTML adicional a partir de la información extraída
+        }
+      };
+    });
+    
+    fileInput.click();
+  }
       
-    };
-    reader.readAsText(file);
-  });
-  fileInput.click();
-}
-
-
   xmlajson() {
     console.log('Hola Mundo');
     const items = []
