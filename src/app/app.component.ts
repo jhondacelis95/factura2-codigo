@@ -113,20 +113,26 @@ export class AppComponent {
           xmlContent,
           'application/xml'
         );
-        JSON.parentDocumentID =
-          xmlDoc.querySelector('ParentDocumentID').textContent;
-        JSON.ublExtensions = xmlDoc.querySelector('UBLExtensions').textContent;
-        JSON.customizationID =
-          xmlDoc.querySelector('CustomizationID').textContent;
-        JSON.profileID = xmlDoc.querySelector('ProfileID').textContent;
-        JSON.profileExecutionID =
-          xmlDoc.querySelector('ProfileExecutionID').textContent;
-        JSON.id = xmlDoc.querySelector('ID').textContent;
-        JSON.issueDate = xmlDoc.querySelector('IssueDate').textContent;
-        JSON.issueTime = xmlDoc.querySelector('IssueTime').textContent;
-        JSON.documentType = xmlDoc.querySelector('DocumentType').textContent;
-        JSON.parentDocumentID =
-          xmlDoc.querySelector('ParentDocumentID').textContent;
+
+
+
+        // JSON.parentDocumentID =
+        //   xmlDoc.querySelector('ParentDocumentID').textContent;
+        // JSON.ublExtensions = xmlDoc.querySelector('UBLExtensions').textContent;
+        // JSON.customizationID =
+        //   xmlDoc.querySelector('CustomizationID').textContent;
+        // JSON.profileID = xmlDoc.querySelector('ProfileID').textContent;
+        // JSON.profileExecutionID =
+        //   xmlDoc.querySelector('ProfileExecutionID').textContent;
+        // JSON.id = xmlDoc.querySelector('ID').textContent;
+        // JSON.issueDate = xmlDoc.querySelector('IssueDate').textContent;
+        // JSON.issueTime = xmlDoc.querySelector('IssueTime').textContent;
+        // JSON.documentType = xmlDoc.querySelector('DocumentType').textContent;
+        // JSON.parentDocumentID =
+        //   xmlDoc.querySelector('ParentDocumentID').textContent;
+
+
+
         JSON.senderParty = {
           partyTaxScheme: xmlDoc.querySelector('PartyTaxScheme').textContent,
         };
@@ -139,6 +145,11 @@ export class AppComponent {
         JSON.senderParty.id = xmlDoc.querySelector(
           'SenderParty PartyTaxScheme TaxScheme ID'
         ).textContent;
+        JSON.senderParty.name = xmlDoc.querySelector(
+          'SenderParty PartyTaxScheme TaxScheme Name'
+        ).textContent;
+
+
 
         const xmlDoc2 = parse.parseFromString(
           xmlDoc
@@ -147,31 +158,73 @@ export class AppComponent {
           'text/xml'
         );
 
-        JSON.paymentDueDate = xmlDoc2.querySelector(
-          'PaymentMeans PaymentDueDate'
-        ).textContent;
-        JSON.companyID = xmlDoc2.querySelector('CompanyID').textContent;
-        JSON.note = xmlDoc2.querySelector('Note').textContent;
 
-        JSON.legalMonetaryTotal = {
-          lineExtensionAmount: xmlDoc2.querySelector('LineExtensionAmount')
-            .textContent,
-        };
-        JSON.legalMonetaryTotal.taxExclusiveAmount =
-          xmlDoc2.querySelector('TaxExclusiveAmount').textContent;
-        JSON.legalMonetaryTotal.taxInclusiveAmount =
-          xmlDoc2.querySelector('TaxInclusiveAmount').textContent;
-        JSON.legalMonetaryTotal.allowanceTotalAmount = xmlDoc2.querySelector(
-          'AllowanceTotalAmount'
-        )?.textContent;
-        JSON.legalMonetaryTotal.chargeTotalAmount =
-          xmlDoc2.querySelector('ChargeTotalAmount')?.textContent;
-        JSON.legalMonetaryTotal.prepaidAmount =
-          xmlDoc2.querySelector('PrepaidAmount')?.textContent;
-        JSON.legalMonetaryTotal.payableAmount =
-          xmlDoc2.querySelector('PayableAmount').textContent;
+        JSON.description = {
+          
+          paymentDueDate: xmlDoc2.querySelector('PaymentMeans PaymentDueDate').textContent,
+          companyID: xmlDoc2.querySelector('CompanyID').textContent,
+
+          legalMonetaryTotal:{
+            lineExtensionAmount: xmlDoc2.querySelector('LineExtensionAmount').textContent,
+            taxExclusiveAmount: xmlDoc2.querySelector('TaxExclusiveAmount').textContent,
+            taxInclusiveAmount: xmlDoc2.querySelector('TaxInclusiveAmount').textContent,
+            allowanceTotalAmount : xmlDoc2.querySelector('AllowanceTotalAmount').textContent,
+            chargeTotalAmount: xmlDoc2.querySelector('ChargeTotalAmount').textContent,
+            prepaidAmount: xmlDoc2.querySelector('PrepaidAmount').textContent,
+            payableAmount: xmlDoc2.querySelector('PayableAmount').textContent,
+          },
+
+          accountingSupplierParty:{
+            additionalAccountID: xmlDoc2.querySelector('AdditionalAccountID').textContent,
+            name: xmlDoc2.querySelector('PartyName Name').textContent,
+            id: xmlDoc2.querySelector('Address ID').textContent,
+            cityName: xmlDoc2.querySelector('Address CityName').textContent,
+            postalZone: xmlDoc2.querySelector('Address PostalZone').textContent,
+            country: xmlDoc2.querySelector('Address Country').textContent,
+            countrySubentity: xmlDoc2.querySelector('Address CountrySubentity').textContent,            
+            countrySubentityCode: xmlDoc2.querySelector('Address CountrySubentityCode').textContent,
+            identificationCode: xmlDoc2.querySelector('Address Country IdentificationCode ').textContent,
+            countryName: xmlDoc2.querySelector('Address Country Name').textContent,
+            registrationName: xmlDoc2.querySelector('PartyTaxScheme RegistrationName').textContent,
+            companyID: xmlDoc2.querySelector('PartyTaxScheme CompanyID').textContent
+            // : xmlDoc2.querySelector('').textContent,
+            // : xmlDoc2.querySelector('').textContent,
+            // : xmlDoc2.querySelector('').textContent,
+            // : xmlDoc2.querySelector('').textContent,
+            // : xmlDoc2.querySelector('').textContent,
+
+          }
+        }
+        // JSON.paymentDueDate = xmlDoc2.querySelector(
+        //   'PaymentMeans PaymentDueDate'
+        // ).textContent;
+        // JSON.companyID = xmlDoc2.querySelector('CompanyID').textContent;
+        // JSON.note = xmlDoc2.querySelector('Note').textContent;
+
+
+        // JSON.legalMonetaryTotal = {
+        //   lineExtensionAmount: xmlDoc2.querySelector('LineExtensionAmount')
+        //     .textContent,
+        // };
+        // JSON.legalMonetaryTotal.taxExclusiveAmount =
+        //   xmlDoc2.querySelector('TaxExclusiveAmount').textContent;
+        // JSON.legalMonetaryTotal.taxInclusiveAmount =
+        //   xmlDoc2.querySelector('TaxInclusiveAmount').textContent;
+        // JSON.legalMonetaryTotal.allowanceTotalAmount = xmlDoc2.querySelector(
+        //   'AllowanceTotalAmount'
+        // )?.textContent;
+        // JSON.legalMonetaryTotal.chargeTotalAmount =
+        //   xmlDoc2.querySelector('ChargeTotalAmount')?.textContent;
+        // JSON.legalMonetaryTotal.prepaidAmount =
+        //   xmlDoc2.querySelector('PrepaidAmount')?.textContent;
+        // JSON.legalMonetaryTotal.payableAmount =
+        //   xmlDoc2.querySelector('PayableAmount').textContent;
+
+
 
         JSON.taxTotal = xmlDoc2.querySelector('TaxTotal TaxAmount').textContent;
+
+
 
         JSON.accountingSupplierParty = {
           additionalAccountID: xmlDoc2.querySelector('AdditionalAccountID')
@@ -208,6 +261,8 @@ export class AppComponent {
           'PartyTaxScheme CompanyID'
         ).textContent;
 
+
+
         JSON.accountingCustomerParty = {
           additionalAccountID: xmlDoc2.querySelector('AdditionalAccountID')
             .textContent,
@@ -232,16 +287,18 @@ export class AppComponent {
         JSON.accountingCustomerParty.identificationCode = xmlDoc2.querySelector(
           'Address Country IdentificationCode '
         ).textContent;
-        JSON.accountingCustomerParty.name = xmlDoc2.querySelector(
+        JSON.accountingCustomerParty.countryName = xmlDoc2.querySelector(
           'Address Country Name'
         ).textContent;
 
         JSON.accountingCustomerParty.registrationName = xmlDoc2.querySelector(
-          'PartyTaxScheme RegistrationName'
+          'AccountingCustomerParty PartyTaxScheme RegistrationName'
         ).textContent;
         JSON.accountingCustomerParty.companyID = xmlDoc2.querySelector(
           'PartyTaxScheme CompanyID'
         ).textContent;
+
+
 
         JSON.registrationAddress = {
           partyTaxScheme: xmlDoc.querySelector('PartyTaxScheme').textContent,
@@ -271,9 +328,7 @@ export class AppComponent {
           'PartyTaxScheme RegistrationAddress Country Name'
         ).textContent;
 
-        JSON.taxScheme = { taxScheme: xmlDoc.querySelector('ID').textContent };
-        JSON.taxScheme.name =
-          xmlDoc2.querySelector('TaxScheme Name').textContent;
+
 
         JSON.partyLegalEntity = {
           registrationName:
@@ -286,6 +341,8 @@ export class AppComponent {
           'PartyLegalEntity CorporateRegistrationScheme ID'
         )?.textContent;
 
+
+
         JSON.accountingSupplierParty.nameContact =
           xmlDoc2.querySelector('Contact Name').textContent;
         JSON.accountingSupplierParty.telephoneContact =
@@ -293,9 +350,13 @@ export class AppComponent {
         JSON.accountingSupplierParty.electronicMailContact =
           xmlDoc2.querySelector('Contact ElectronicMail').textContent;
 
+
+
         JSON.withholdingTaxTotal = xmlDoc2.querySelector(
           'WithholdingTaxTotal TaxAmount'
         )?.textContent;
+
+
 
         JSON.paymentMeans = {
           paymentMeans: xmlDoc2.querySelector('PaymentMeans').textContent,
@@ -308,6 +369,8 @@ export class AppComponent {
         JSON.paymentMeans.paymentDueDate = xmlDoc2.querySelector(
           'PaymentMeans PaymentDueDate'
         ).textContent;
+
+
 
         const itemsXML = xmlDoc2.querySelectorAll('InvoiceLine');
         itemsXML.forEach((elemento) => {
