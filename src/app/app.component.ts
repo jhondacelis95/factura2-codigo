@@ -5,6 +5,10 @@ import autoTable from 'jspdf-autotable';
 import * as pdfjsLib from 'pdfjs-dist';
 import * as pdfjsWorker from 'pdfjs-dist/build/pdf.worker.entry';
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;
+import * as xml2js from 'xml2js';
+import { xml2json, Options } from 'xml-js';
+
+
 
 @Component({
   selector: 'app-root',
@@ -13,6 +17,32 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;
 })
 export class AppComponent {
   title = 'Proyect1';
+
+   xmltojson() {
+    console.log('Hola Mundo');
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = 'application/xml';
+    fileInput.addEventListener('change', () => {
+      const file = fileInput.files[0];
+      const reader = new FileReader();
+      reader.onload = () => {
+        const xml = reader.result as string;
+        const options: Options.XML2JSON = {
+          compact: true,
+          spaces: 2
+        };
+        const json = xml2json(xml, options);
+        console.log('JSON resultante:', json);
+      };
+      reader.readAsText(file);
+    });
+    fileInput.click();
+  }
+  
+
+  
+
 
   pdfToHtml() {
     const JSON: any = {};
@@ -150,6 +180,7 @@ export class AppComponent {
         // ).textContent;
 
 
+
         JSON.senderParty = {
           partyTaxScheme: {
             registrationName: xmlDoc.querySelector('SenderParty PartyTaxScheme RegistrationName').textContent,
@@ -163,8 +194,6 @@ export class AppComponent {
             }
           }
         }
-
-
 
 
 
@@ -299,7 +328,7 @@ export class AppComponent {
               elemento.querySelector('Price PriceAmount').textContent,
             baseQuantity:
               elemento.querySelector('Price BaseQuantity').textContent,
-            taxSubtotal: elemento.querySelector('TaxSubtotal TaxableAmount')
+            taxableAmount: elemento.querySelector('TaxSubtotal TaxableAmount')
               .textContent,
             taxAmount: elemento.querySelector('TaxTotal TaxAmount').textContent,
           });
@@ -312,6 +341,7 @@ export class AppComponent {
     });
     fileInput.click();
   }
+
   generatePdf() {
     const doc = new jsPDF();
     let pageNumber = 0;
