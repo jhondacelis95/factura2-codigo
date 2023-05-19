@@ -5,8 +5,10 @@ import autoTable from 'jspdf-autotable';
 import * as pdfjsLib from 'pdfjs-dist';
 import * as pdfjsWorker from 'pdfjs-dist/build/pdf.worker.entry';
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;
-import * as xml2js from 'xml2js';
+// import * as xml2js from 'xml2js';
 import { xml2json, Options } from 'xml-js';
+import * as fastXmlParser from 'fast-xml-parser';
+
 
 
 
@@ -17,6 +19,37 @@ import { xml2json, Options } from 'xml-js';
 })
 export class AppComponent {
   title = 'Proyect1';
+
+
+
+
+  xmltojson2() {
+    console.log('Hola Mundo');
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = 'application/xml';
+    fileInput.addEventListener('change', () => {
+      const file = fileInput.files[0];
+      const reader = new FileReader();
+      reader.onload = () => {
+        const xmlContent = reader.result as string;
+  
+        // Parsear el XML a un objeto JSON utilizando fast-xml-parser
+        const options = {
+          attributeNamePrefix: '@',
+          ignoreAttributes: false
+        };
+        const jsonObject = fastXmlParser.parse(xmlContent, options);
+  
+        // Aquí puedes manipular el objeto JSON extraído del XML como desees
+        console.log(jsonObject);
+      };
+      reader.readAsText(file);
+    });
+    fileInput.click();
+  }  
+
+
 
    xmltojson() {
     console.log('Hola Mundo');
