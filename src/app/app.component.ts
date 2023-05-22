@@ -41,13 +41,35 @@ export class AppComponent {
         };
         const jsonObject = fastXmlParser.parse(xmlContent, options);
   
-        // Aquí puedes manipular el objeto JSON extraído del XML como desees
-        console.log(jsonObject);
+        // Función para eliminar el prefijo del objeto JSON
+        function removePrefix(obj) {
+          if (typeof obj !== 'object' || obj === null) {
+            return obj;
+          }
+  
+          if (Array.isArray(obj)) {
+            return obj.map(removePrefix);
+          }
+  
+          const newObj = {};
+          for (const key in obj) {
+            if (obj.hasOwnProperty(key)) {
+              const newKey = key.replace(/^[^:]+:/, ''); // Elimina el prefijo antes de los dos puntos
+              newObj[newKey] = removePrefix(obj[key]);
+            }
+          }
+  
+          return newObj;
+        }
+  
+        const jsonObjectWithoutPrefix = removePrefix(jsonObject);
+        console.log(jsonObjectWithoutPrefix);
       };
       reader.readAsText(file);
     });
     fileInput.click();
-  }  
+  }
+  
 
 
 
