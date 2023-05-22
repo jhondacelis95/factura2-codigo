@@ -41,35 +41,58 @@ export class AppComponent {
         };
         const jsonObject = fastXmlParser.parse(xmlContent, options);
   
-        // Función para eliminar el prefijo del objeto JSON
-        function removePrefix(obj) {
-          if (typeof obj !== 'object' || obj === null) {
-            return obj;
-          }
-  
-          if (Array.isArray(obj)) {
-            return obj.map(removePrefix);
-          }
-  
-          const newObj = {};
-          for (const key in obj) {
-            if (obj.hasOwnProperty(key)) {
-              const newKey = key.replace(/^[^:]+:/, ''); // Elimina el prefijo antes de los dos puntos
-              newObj[newKey] = removePrefix(obj[key]);
-            }
-          }
-  
-          return newObj;
+        // Agregar contenido al elemento Invoice
+        if (jsonObject.Invoice) {
+          const invoiceContent = 'Contenido del Invoice'; // Aquí puedes asignar el contenido deseado
+          jsonObject.Invoice = invoiceContent;
         }
   
-        const jsonObjectWithoutPrefix = removePrefix(jsonObject);
-        console.log(jsonObjectWithoutPrefix);
+        // Imprimir el objeto JSON original
+        console.log(removePrefixRecursively(jsonObject));
+  
+        // Imprimir el objeto JSON sin prefijos
+        console.log(removePrefixInConsoleLogRecursively(jsonObject));
       };
       reader.readAsText(file);
     });
     fileInput.click();
+  
+    // Función para eliminar el prefijo del objeto JSON recursivamente
+    function removePrefixRecursively(obj) {
+      if (typeof obj !== 'object' || obj === null) {
+        return obj;
+      }
+  
+      if (Array.isArray(obj)) {
+        return obj.map(removePrefixRecursively);
+      }
+  
+      const newObj = {};
+      for (const key in obj) {
+        if (obj.hasOwnProperty(key)) {
+          const newKey = key.replace(/^[^:]+:/, ''); // Elimina el prefijo antes de los dos puntos
+          newObj[newKey] = removePrefixRecursively(obj[key]);
+        }
+      }
+  
+      return newObj;
+    }
+  
+    // Función para eliminar el prefijo en los objetos dentro de los console.log
+    function removePrefixInConsoleLogRecursively(obj) {
+      const stringifiedObj = JSON.stringify(obj, null, 2);
+      const newString = stringifiedObj.replace(/"[^":]+:/g, '"');
+      return JSON.parse(newString);
+    }
   }
   
+  
+  
+  
+  
+  
+  
+
 
 
 
