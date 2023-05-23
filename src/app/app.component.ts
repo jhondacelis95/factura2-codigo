@@ -38,7 +38,12 @@ export class AppComponent {
             ?.textContent.trim() ||
           new XMLSerializer().serializeToString(xmlDoc.documentElement);
 
-        const jsonObject = fastXmlParser.parse(xmlDoc2);
+        const options = {
+          attributeNamePrefix: '@',
+          ignoreAttributes: false,
+        };
+
+        const jsonObject = fastXmlParser.parse(xmlDoc2, options);
         console.log(removePrefixInRecursively(jsonObject));
       };
       reader.readAsText(file);
