@@ -49,7 +49,7 @@ export class AppComponent {
       const stringifiedObj = JSON.stringify(obj, null, 2);
       const newString = stringifiedObj.replace(/"[^":]+:/g, '"');
       const newString2 = newString.replace(/"[^":]+@/g, '"');
-      const newString3 = newString.replace(/"[^":]+#/g, '"');
+      const newString3 = newString2.replace(/"[^":]+#/g, '"');
       return JSON.parse(newString3);
     }
   }
