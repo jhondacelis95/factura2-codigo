@@ -53,12 +53,17 @@ export class AppComponent {
     function removePrefixInRecursively(obj) {
       const stringifiedObj = JSON.stringify(obj, null, 2);
       const newString = stringifiedObj.replace(/"[^":]+:/g, '"');
-      const newString2 = newString.replace(/"[^":]+@/g, '"');
-      const newString3 = newString2.replace(/"[^":]+#/g, '"');
+      const newString2 = newString.replace(/"@/g, '"');
+      const newString3 = newString2.replace(/"#/g, '"');
       return JSON.parse(newString3);
     }
+    
   }
 
+
+
+
+  
   xmltojson2() {
     console.log('Hola Mundo');
     const fileInput = document.createElement('input');
