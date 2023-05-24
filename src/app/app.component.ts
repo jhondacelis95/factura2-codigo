@@ -57,13 +57,8 @@ export class AppComponent {
       const newString3 = newString2.replace(/"#/g, '"');
       return JSON.parse(newString3);
     }
-    
   }
 
-
-
-
-  
   xmltojson2() {
     console.log('Hola Mundo');
     const fileInput = document.createElement('input');
@@ -543,6 +538,873 @@ export class AppComponent {
         vatTotal: 104500,
         _id: '6451593d33ff1e6e52db4708',
       },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
+      {
+        costo: 5500,
+        costoTotal: 550000,
+        vat: 1045,
+        cant: 100,
+        producto: {
+          ultimoCosto: 6580,
+          unidad: {
+            simbolo: 'PAR',
+          },
+          codigo: 3015,
+          nombre: 'GUANTE VAQUETA CORTO',
+        },
+        total: 654500,
+        vatTotal: 104500,
+        _id: '6451593d33ff1e6e52db4708',
+      },
     ];
 
     array.forEach((el, index) => {
@@ -870,16 +1732,32 @@ export class AppComponent {
       head: [['Total Items: 1 - Total Productos 60']],
     });
 
+    // const tableOptions = {
+    //   // ... other table options
+    //   didDrawPage: function(data) {
+    //     // Add the current page number and total page number to the footer
+    //     const totalPages = doc.internal.pages.length;
+    //     const pageNumber = data.pageNumber;
+
+    //     const footerText = 'Page ' + pageNumber + ' of ' + totalPages;
+    //     const pageSize = doc.internal.pageSize;
+    //     const pageHeight = pageSize.height ? pageSize.height : pageSize.getHeight();
+
+    //     doc.setFontSize(10);
+    //     doc.text(footerText, data.settings.margin.left, pageHeight - 10);
+    //   }
+    // };
+
     autoTable(doc, {
       theme: 'plain',
-      didDrawPage: (data) => {
-        pageNumber++;
-        doc.text(
-          `Página ${pageNumber}`,
-          data.settings.margin.left,
-          doc.internal.pageSize.height - 10
-        );
-      },
+      // didDrawPage: (data) => {
+      //   pageNumber++;
+      //   doc.text(
+      //     `Página ${pageNumber}`,
+      //     data.settings.margin.left,
+      //     doc.internal.pageSize.height - 10
+      //   );
+      // },
       styles: {
         halign: 'center',
         lineWidth: 0.1,
@@ -888,6 +1766,7 @@ export class AppComponent {
         ['#', 'Descripción', 'UND', 'Cant', 'Valor Unitario', 'Valor Total'],
       ],
       body: products,
+      // ...tableOptions
     });
 
     // // 6. Observaciones
@@ -929,6 +1808,21 @@ export class AppComponent {
     //         }
     //     }
     // })
+
+    const totalPages = doc.internal.pages.length - 1;
+    for (let i = 1; i <= totalPages; i++) {
+      doc.setPage(i);
+
+      // Add page number and total page number
+      doc.setFont('helvetica', 'italic');
+      doc.setFontSize(10);
+      doc.setTextColor(0, 0, 0);
+      doc.text(
+        'Page ' + i + ' of ' + totalPages,
+        10,
+        doc.internal.pageSize.height - 10
+      );
+    }
 
     return doc.save('orden-compra');
   }
