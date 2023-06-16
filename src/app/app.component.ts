@@ -1438,7 +1438,21 @@ export class AppComponent {
           content: '1.921.264,80 $',
           colSpan: 6,
         },
+      ],  
+          [
+        {
+          content: 'Mapa',
+          styles: {
+            halign: 'left',
+            fontStyle: 'bold',
+          },
+        },
+        {
+          content: 'Ver mapa',
+          colSpan: 6,
+        },
       ]
+      
     );
 
     let imgData =
@@ -1671,6 +1685,111 @@ export class AppComponent {
       ],
       body: products,
     });
+
+
+
+
+doc.addPage();
+
+autoTable(doc, {
+  theme: 'plain',
+  styles: {
+    lineWidth: 0.1,
+    halign: 'center'
+  },
+  head: [
+    [{
+      content: 'TITULO PRUEBA',
+      colSpan: 3
+    }]
+  ],
+  body: [
+    ['PRUEBA1', 'PRUEBA2', 'PRUEBA3'],
+    ['PRUEBA4', 'PRUEBA5', 'PRUEBA6'],
+  ],
+
+
+  didParseCell: (data) => {
+    if (data.section === 'body' && data.row.index === 0) {
+      data.cell.styles.fontStyle = 'bold';
+    }
+  },
+  didDrawCell: (data) => {
+    if (data.section === 'body' && data.row.index === 1 && data.column.index === 1) {
+      const cellWidth = data.cell.width;
+      const cellHeight = data.cell.height;
+      const imgX = data.cell.x + data.cell.padding('horizontal'); // Ajusta la posición de la imagen en X
+      const imgY = data.cell.y + data.cell.padding('vertical'); // Ajusta la posición de la imagen en Y
+      const imageUrl = 'assets/imagen.png'; // Ruta de la imagen relativa a la carpeta del proyecto
+
+      doc.addImage(imageUrl, 'PNG', imgX, imgY, 10, 10); // Agrega la imagen al PDF
+
+      // Agregar enlace debajo de la imagen
+      const linkText = 'Ver mapa';
+      const linkX = imgX - 5; // Ajusta la posición X del enlace
+      const linkY = imgY + cellHeight + 5; // Ajusta la posición Y del enlace
+
+      doc.textWithLink(linkText, linkX, linkY, {
+        url: 'https://www.youtube.com'
+      });
+    }
+  }
+});
+
+doc.addPage();
+
+const table = document.createElement('table');
+table.innerHTML = `
+  <thead>
+    <tr>
+      <th>Forma de Pago</th>
+      <th>Condiciones de Pago</th>
+      <th>Fecha de Entrega</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://www.youtube.com">TRANSFERENCIA</a></td>
+      <td>45 DÍAS</td>
+      <td>22/04/23</td>
+    </tr>
+  </tbody>
+`;
+
+// Convierte la tabla HTML a PDF
+(doc as any).autoTable({ html: table });
+
+
+doc.addPage();
+
+autoTable(doc, {
+  theme: 'plain',
+  styles: {
+    halign: 'center',
+    lineWidth: 0.1,
+  },
+  head: [['Forma de Pago', 'Condiciones de Pago', 'Fecha de Entrega']],
+  body: [['TRANSFERENCIA', '45 DÍAS', '22/04/23']],
+  didDrawCell: (data) => {
+    if (data.section === 'body' && data.row.index === 0 && data.column.index === 0) {
+      const cell45Dias = data.cell; // Obtener la celda que contiene "45 días"
+      const linkText = 'Ver mapa';
+      
+      const linkX = cell45Dias.x + cell45Dias.padding('horizontal'); // Ajustar la posición X del enlace alineándola con la celda "45 días"
+      const linkY = cell45Dias.y + cell45Dias.padding('vertical') + (cell45Dias.height - doc.getTextDimensions(linkText).h) / 2; // Ajustar la posición Y del enlace para que esté centrado verticalmente en la celda
+      
+      doc.textWithLink(linkText, linkX, linkY, {
+        url: 'https://www.youtube.com',
+        underline: false,
+        fontSize: 8,
+        textColor: [0, 0, 255],
+      });
+    }
+  },
+});
+
+
+
 
 
 
