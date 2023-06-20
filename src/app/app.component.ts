@@ -1825,51 +1825,109 @@ export class AppComponent {
 
     doc.addPage();
 
+    const array2 = [ // simula datos de la base de datos
+      {
+        id: '1',
+        nombre: 'TK502 ODC COVEÑAS 1',
+        direccion: 'TERMINAL PETROLERO ODC 1',
+        municipio: 'SUCRE 1',
+        ciudad: 'COVEÑAS 1',
+        mapa: 'https://www.google.com/maps?id=1',
+      },
+      {
+        id: '2',
+        nombre: 'TK502 ODC COVEÑAS 2',
+        direccion: 'TERMINAL PETROLERO ODC 2',
+        municipio: 'SUCRE 2',
+        ciudad: 'COVEÑAS 2',
+        mapa: 'https://www.google.com/maps?id=2',
+      },
+      {
+        id: '3',
+        nombre: 'TK502 ODC COVEÑAS 3',
+        direccion: 'TERMINAL PETROLERO ODC 4',
+        municipio: 'SUCRE 3',
+        ciudad: 'COVEÑAS 3',
+        mapa: 'https://www.google.com/maps?id=3',
+      },
+    ];
+
+    const mapsArray = [];
+
+    array2.forEach((elemento) => {
+      mapsArray.push([
+        elemento.id,
+        elemento.nombre,
+        elemento.direccion,
+        elemento.municipio,
+        elemento.ciudad,
+        '',
+      ]);
+    });
+
     autoTable(doc, {
       theme: 'plain',
       styles: {
         halign: 'center',
         lineWidth: 0.1,
       },
-      head: [['#', 'NOMBRE', 'DIRECCION', 'MUNICIPIO', 'CIUDAD', 'GOOGLE MAPS']],
-      body: [
-        ['1', 'TK502 ODC COVEÑAS', 'TERMINAL PETROLERO ODC', 'SUCRE', 'COVEÑAS', ''],
-        ['2', 'TK402 CENITAPIAY', 'POMPEYA ALTO, KM26......', 'META', 'VILLAVIENCIO', ''],
+      head: [
+        ['#', 'NOMBRE', 'DIRECCION', 'MUNICIPIO', 'CIUDAD', 'GOOGLE MAPS'],
       ],
-    
+      body: mapsArray,
+      // body: [
+      //   [
+      //     '1',
+      //     'TK502 ODC COVEÑAS',
+      //     'TERMINAL PETROLERO ODC',
+      //     'SUCRE',
+      //     'COVEÑAS',
+      //     '',
+      //   ],
+      //   [
+      //     '2',
+      //     'TK402 CENITAPIAY',
+      //     'POMPEYA ALTO, KM26......',
+      //     'META',
+      //     'VILLAVIENCIO',
+      //     '',
+      //   ],
+      // ],
+
       didParseCell: (data) => {
         if (data.row.index >= 0) {
-          data.cell.styles.cellPadding = 6; // Aumentar el cellpadding de las celdas
+          data.cell.styles.cellPadding = 3; // Aumentar el cellpadding de las celdas
         }
       },
-    
+
       didDrawCell: (data) => {
         if (data.section === 'body' && data.column.index === 5) {
           const cellGoogleMaps = data.cell;
           const rowIndex = data.row.index;
-    
-          if (rowIndex === 0 || rowIndex === 1) {
-            const linkText = 'Ver mapa';
-    
-            const linkX = cellGoogleMaps.x + cellGoogleMaps.padding('left');
-            const linkY = cellGoogleMaps.y + cellGoogleMaps.padding('top') + (cellGoogleMaps.height - doc.getTextDimensions(linkText).h) / 2;
-    
-            doc.setTextColor(0, 0, 255);
-            doc.setFont('helvetica', 'normal');
-            doc.setFontSize(12);
-    
-            const textX = linkX + doc.getTextWidth(linkText);
-            const textY = linkY + 1;
-    
-            doc.textWithLink(linkText, linkX, linkY, {
-              url: 'https://maps.google.com',
-              underline: false,
-            });
-    
-            doc.setLineWidth(0.5);
-            doc.setDrawColor(0, 0, 255);
-            doc.line(linkX, textY, textX, textY);
-          }
+
+          const linkText = 'Ver mapa';
+
+          const linkX = cellGoogleMaps.x + cellGoogleMaps.padding('left');
+          const linkY =
+            cellGoogleMaps.y +
+            cellGoogleMaps.padding('top') +
+            (cellGoogleMaps.height - doc.getTextDimensions(linkText).h) / 2;
+
+          doc.setTextColor(0, 0, 255);
+          doc.setFont('helvetica', 'normal');
+          doc.setFontSize(12);
+
+          const textX = linkX + doc.getTextWidth(linkText);
+          const textY = linkY + 1;
+
+          doc.textWithLink(linkText, linkX, linkY, {
+            url: array2[rowIndex].mapa,
+            underline: false,
+          });
+
+          doc.setLineWidth(0.5);
+          doc.setDrawColor(0, 0, 255);
+          doc.line(linkX, textY, textX, textY);
         }
       },
     });
