@@ -24,7 +24,7 @@ export class AppComponent {
   title = 'Proyect1';
 
   refreshGraphs() {
-  //   https://app.powerbi.com/links/7uqOmJGVHH?ctid=e4e1bc33-e283-4312-bb37-89010224b7fe&pbi_source=linkShare
+    //   https://app.powerbi.com/links/7uqOmJGVHH?ctid=e4e1bc33-e283-4312-bb37-89010224b7fe&pbi_source=linkShare
   }
 
 
@@ -1045,15 +1045,15 @@ export class AppComponent {
       didDrawPage: (data) => {
         totalPages++; // Incrementar el número total de páginas en cada página dibujada
         const currentPage = data.pageNumber; // Obtener el número de página actual
-      
+
         doc.text(
           `Página ${currentPage} de ${totalPages}`,
           data.settings.margin.left,
           doc.internal.pageSize.height - 10
         );
       },
-      
-      
+
+
       theme: 'plain',
       styles: {
         halign: 'center',
@@ -1438,8 +1438,8 @@ export class AppComponent {
           content: '1.921.264,80 $',
           colSpan: 6,
         },
-      ],  
-          [
+      ],
+      [
         {
           content: 'Mapa',
           styles: {
@@ -1452,7 +1452,7 @@ export class AppComponent {
           colSpan: 6,
         },
       ]
-      
+
     );
 
     let imgData =
@@ -1666,15 +1666,15 @@ export class AppComponent {
       didDrawPage: (data) => {
         totalPages++; // Incrementar el número total de páginas en cada página dibujada
         const currentPage = data.pageNumber; // Obtener el número de página actual
-      
+
         doc.text(
           `Página ${currentPage} de ${totalPages}`,
           data.settings.margin.left,
           doc.internal.pageSize.height - 10
         );
       },
-      
-      
+
+
       theme: 'plain',
       styles: {
         halign: 'center',
@@ -1689,57 +1689,57 @@ export class AppComponent {
 
 
 
-doc.addPage();
+    doc.addPage();
 
-autoTable(doc, {
-  theme: 'plain',
-  styles: {
-    lineWidth: 0.1,
-    halign: 'center'
-  },
-  head: [
-    [{
-      content: 'TITULO PRUEBA',
-      colSpan: 3
-    }]
-  ],
-  body: [
-    ['PRUEBA1', 'PRUEBA2', 'PRUEBA3'],
-    ['PRUEBA4', 'PRUEBA5', 'PRUEBA6'],
-  ],
+    autoTable(doc, {
+      theme: 'plain',
+      styles: {
+        lineWidth: 0.1,
+        halign: 'center'
+      },
+      head: [
+        [{
+          content: 'TITULO PRUEBA',
+          colSpan: 3
+        }]
+      ],
+      body: [
+        ['PRUEBA1', 'PRUEBA2', 'PRUEBA3'],
+        ['PRUEBA4', 'PRUEBA5', 'PRUEBA6'],
+      ],
 
 
-  didParseCell: (data) => {
-    if (data.section === 'body' && data.row.index === 0) {
-      data.cell.styles.fontStyle = 'bold';
-    }
-  },
-  didDrawCell: (data) => {
-    if (data.section === 'body' && data.row.index === 1 && data.column.index === 1) {
-      const cellWidth = data.cell.width;
-      const cellHeight = data.cell.height;
-      const imgX = data.cell.x + data.cell.padding('horizontal'); // Ajusta la posición de la imagen en X
-      const imgY = data.cell.y + data.cell.padding('vertical'); // Ajusta la posición de la imagen en Y
-      const imageUrl = 'assets/imagen.png'; // Ruta de la imagen relativa a la carpeta del proyecto
+      didParseCell: (data) => {
+        if (data.section === 'body' && data.row.index === 0) {
+          data.cell.styles.fontStyle = 'bold';
+        }
+      },
+      didDrawCell: (data) => {
+        if (data.section === 'body' && data.row.index === 1 && data.column.index === 1) {
+          const cellWidth = data.cell.width;
+          const cellHeight = data.cell.height;
+          const imgX = data.cell.x + data.cell.padding('horizontal'); // Ajusta la posición de la imagen en X
+          const imgY = data.cell.y + data.cell.padding('vertical'); // Ajusta la posición de la imagen en Y
+          const imageUrl = 'assets/imagen.png'; // Ruta de la imagen relativa a la carpeta del proyecto
 
-      doc.addImage(imageUrl, 'PNG', imgX, imgY, 10, 10); // Agrega la imagen al PDF
+          doc.addImage(imageUrl, 'PNG', imgX, imgY, 10, 10); // Agrega la imagen al PDF
 
-      // Agregar enlace debajo de la imagen
-      const linkText = 'Ver mapa';
-      const linkX = imgX - 5; // Ajusta la posición X del enlace
-      const linkY = imgY + cellHeight + 5; // Ajusta la posición Y del enlace
+          // Agregar enlace debajo de la imagen
+          const linkText = 'Ver mapa';
+          const linkX = imgX - 5; // Ajusta la posición X del enlace
+          const linkY = imgY + cellHeight + 5; // Ajusta la posición Y del enlace
 
-      doc.textWithLink(linkText, linkX, linkY, {
-        url: 'https://www.youtube.com'
-      });
-    }
-  }
-});
+          doc.textWithLink(linkText, linkX, linkY, {
+            url: 'https://www.youtube.com'
+          });
+        }
+      }
+    });
 
-doc.addPage();
+    doc.addPage();
 
-const table = document.createElement('table');
-table.innerHTML = `
+    const table = document.createElement('table');
+    table.innerHTML = `
   <thead>
     <tr>
       <th>Forma de Pago</th>
@@ -1756,41 +1756,141 @@ table.innerHTML = `
   </tbody>
 `;
 
-// Convierte la tabla HTML a PDF
-(doc as any).autoTable({ html: table });
+    // Convierte la tabla HTML a PDF
+    (doc as any).autoTable({ html: table });
 
 
-doc.addPage();
+    doc.addPage();
 
-autoTable(doc, {
-  theme: 'plain',
-  styles: {
-    halign: 'center',
-    lineWidth: 0.1,
-  },
-  head: [['Forma de Pago', 'Condiciones de Pago', 'Fecha de Entrega']],
-  body: [['TRANSFERENCIA', '45 DÍAS', '22/04/23']],
-  didDrawCell: (data) => {
-    if (data.section === 'body' && data.row.index === 0 && data.column.index === 0) {
-      const cell45Dias = data.cell; // Obtener la celda que contiene "45 días"
-      const linkText = 'Ver mapa';
+    autoTable(doc, {
+      theme: 'plain',
+      styles: {
+        halign: 'center',
+        lineWidth: 0.1,
+      },
+      head: [['#', 'NOMBRE', 'DIRECCION', 'MUNICIPIO', 'CIUDAD', 'GOOGLE MAPS']],
+      body: [['1', 'TK502 ODC COVEÑAS', 'TERMINAL PETROLERO ODC', 'SUCRE', 'COVEÑAS', ''],
+      ['2', 'TK402 CENITAPIAY', 'POMPEYA ALTO, KM26......', 'META', 'VILLAVIENCIO', '']],
+
+
+      didParseCell: (data) => {
+        if (data.row.index >= 0) {
+          data.cell.styles.cellPadding = 6; // Aumentar el cellpadding de las celdas
+        }
+      },
+
+      didDrawCell: (data) => {
+        if (data.section === 'body' && data.column.index === 5) {
+          const cellGoogleMaps = data.cell;
+          const rowIndex = data.row.index;
+        
+          if (rowIndex === 0 || rowIndex === 1) {
+            const linkText = 'Ver mapa';
+        
+            const linkX = cellGoogleMaps.x + cellGoogleMaps.padding('left');
+            const linkY = cellGoogleMaps.y + cellGoogleMaps.padding('top') + (cellGoogleMaps.height - doc.getTextDimensions(linkText).h) / 2;
+        
+            const iconX = linkX + 3;
+            const iconY = linkY - 12;
+            const iconWidth = 8;
+            const iconHeight = 8;
       
-      const linkX = cell45Dias.x + cell45Dias.padding('horizontal'); // Ajustar la posición X del enlace alineándola con la celda "45 días"
-      const linkY = cell45Dias.y + cell45Dias.padding('vertical') + (cell45Dias.height - doc.getTextDimensions(linkText).h) / 2; // Ajustar la posición Y del enlace para que esté centrado verticalmente en la celda
+            doc.addImage('assets/imagen.png', 'PNG', iconX, iconY, iconWidth, iconHeight);
       
-      doc.textWithLink(linkText, linkX, linkY, {
-        url: 'https://www.youtube.com',
-        underline: false,
-        fontSize: 8,
-        textColor: [0, 0, 255],
-      });
-    }
-  },
-});
+            doc.setTextColor(0, 0, 255);
+            doc.setFont('helvetica', 'normal');
+            doc.setFontSize(12);
+      
+            const textX = linkX + doc.getTextWidth(linkText);
+            const textY = linkY + 1;
+      
+            doc.textWithLink(linkText, linkX, linkY, {
+              url: 'https://maps.google.com',
+              underline: false,
+            });
+      
+            doc.setLineWidth(0.5);
+            doc.setDrawColor(0, 0, 255);
+            doc.line(linkX, textY, textX, textY);
+          }
+        }
+      },
+      
+    });
 
 
 
 
+
+
+    doc.addPage();
+
+    autoTable(doc, {
+      theme: 'plain',
+      styles: {
+        halign: 'center',
+        lineWidth: 0.1,
+      },
+      head: [['#', 'NOMBRE', 'DIRECCION', 'MUNICIPIO', 'CIUDAD', 'GOOGLE MAPS']],
+      body: [['1', 'TK502 ODC COVEÑAS', 'TERMINAL PETROLERO ODC', 'SUCRE', 'COVEÑAS', ''],
+      ['2', 'TK402 CENITAPIAY', 'POMPEYA ALTO, KM26......', 'META', 'VILLAVIENCIO', '']],
+
+
+      didParseCell: (data) => {
+        if (data.row.index >= 0) {
+          data.cell.styles.cellPadding = 3; // Aumentar el cellpadding de las celdas
+        }
+      },
+    
+      didDrawCell: (data) => {
+        if (data.column.index === 5) {
+          if (data.section === 'body') {
+            const cellGoogleMaps = data.cell; // Obtener la celda de "GOOGLE MAPS"
+            const rowIndex = data.row.index;
+    
+            if (rowIndex === 0 || rowIndex === 1) {
+              const linkText = 'Ver mapa';
+    
+              const linkX = cellGoogleMaps.x + cellGoogleMaps.padding('left'); // Ajustar la posición X del enlace alineándola con el borde izquierdo de la celda "GOOGLE MAPS"
+              const linkY = cellGoogleMaps.y + cellGoogleMaps.padding('top') + (cellGoogleMaps.height - doc.getTextDimensions(linkText).h) / 2; // Ajustar la posición Y del enlace para que esté centrado verticalmente en la celda
+    
+              const linkWidth = doc.getTextWidth(linkText); // Obtener el ancho del texto del enlace
+    
+              const underlineOffset = 2; // Desplazamiento vertical del subrayado desde la línea base del texto
+    
+              doc.setTextColor(0, 0, 255); // Establecer el color azul para el texto
+              doc.setFontSize(10); // Aumentar el tamaño de la letra
+              doc.text(linkText, linkX, linkY);
+    
+              const underlineX = linkX;
+              const underlineY = linkY + underlineOffset;
+              const underlineWidth = linkWidth;
+              const underlineHeight = 0.5; // Grosor del subrayado
+    
+              doc.setDrawColor(0, 0, 255); // Establecer el color azul para el subrayado
+              doc.setLineWidth(underlineHeight);
+              doc.line(underlineX, underlineY, underlineX + underlineWidth, underlineY);
+            }
+          }
+    
+          if (data.section === 'head') {
+            const cellGoogleMaps = data.cell; // Obtener la celda de encabezado "GOOGLE MAPS"
+            const image = new Image();
+            image.src = 'assets/imagen.png'; // Ruta de la imagen "imagen.png" en la carpeta de assets
+    
+            const imageX = cellGoogleMaps.x + cellGoogleMaps.padding('left'); // Ajustar la posición X de la imagen alineándola con el borde izquierdo de la celda de encabezado
+            const imageY = cellGoogleMaps.y + cellGoogleMaps.padding('top'); // Ajustar la posición Y de la imagen alineándola con el borde superior de la celda de encabezado
+            const imageWidth = cellGoogleMaps.width - cellGoogleMaps.padding('horizontal'); // Ajustar el ancho de la imagen para que se ajuste dentro de la celda de encabezado
+            const imageHeight = cellGoogleMaps.height - cellGoogleMaps.padding('vertical'); // Ajustar la altura de la imagen para que se ajuste dentro de la celda de encabezado
+    
+            doc.addImage(image, 'PNG', imageX, imageY, imageWidth, imageHeight);
+          }
+        }
+      },
+    });
+    
+
+    
 
 
 
