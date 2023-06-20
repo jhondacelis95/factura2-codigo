@@ -1832,63 +1832,48 @@ export class AppComponent {
         lineWidth: 0.1,
       },
       head: [['#', 'NOMBRE', 'DIRECCION', 'MUNICIPIO', 'CIUDAD', 'GOOGLE MAPS']],
-      body: [['1', 'TK502 ODC COVEÑAS', 'TERMINAL PETROLERO ODC', 'SUCRE', 'COVEÑAS', ''],
-      ['2', 'TK402 CENITAPIAY', 'POMPEYA ALTO, KM26......', 'META', 'VILLAVIENCIO', '']],
-
-
+      body: [
+        ['1', 'TK502 ODC COVEÑAS', 'TERMINAL PETROLERO ODC', 'SUCRE', 'COVEÑAS', ''],
+        ['2', 'TK402 CENITAPIAY', 'POMPEYA ALTO, KM26......', 'META', 'VILLAVIENCIO', ''],
+      ],
+    
       didParseCell: (data) => {
         if (data.row.index >= 0) {
-          data.cell.styles.cellPadding = 3; // Aumentar el cellpadding de las celdas
+          data.cell.styles.cellPadding = 6; // Aumentar el cellpadding de las celdas
         }
       },
     
       didDrawCell: (data) => {
-        if (data.column.index === 5) {
-          if (data.section === 'body') {
-            const cellGoogleMaps = data.cell; // Obtener la celda de "GOOGLE MAPS"
-            const rowIndex = data.row.index;
+        if (data.section === 'body' && data.column.index === 5) {
+          const cellGoogleMaps = data.cell;
+          const rowIndex = data.row.index;
     
-            if (rowIndex === 0 || rowIndex === 1) {
-              const linkText = 'Ver mapa';
+          if (rowIndex === 0 || rowIndex === 1) {
+            const linkText = 'Ver mapa';
     
-              const linkX = cellGoogleMaps.x + cellGoogleMaps.padding('left'); // Ajustar la posición X del enlace alineándola con el borde izquierdo de la celda "GOOGLE MAPS"
-              const linkY = cellGoogleMaps.y + cellGoogleMaps.padding('top') + (cellGoogleMaps.height - doc.getTextDimensions(linkText).h) / 2; // Ajustar la posición Y del enlace para que esté centrado verticalmente en la celda
+            const linkX = cellGoogleMaps.x + cellGoogleMaps.padding('left');
+            const linkY = cellGoogleMaps.y + cellGoogleMaps.padding('top') + (cellGoogleMaps.height - doc.getTextDimensions(linkText).h) / 2;
     
-              const linkWidth = doc.getTextWidth(linkText); // Obtener el ancho del texto del enlace
+            doc.setTextColor(0, 0, 255);
+            doc.setFont('helvetica', 'normal');
+            doc.setFontSize(12);
     
-              const underlineOffset = 2; // Desplazamiento vertical del subrayado desde la línea base del texto
+            const textX = linkX + doc.getTextWidth(linkText);
+            const textY = linkY + 1;
     
-              doc.setTextColor(0, 0, 255); // Establecer el color azul para el texto
-              doc.setFontSize(10); // Aumentar el tamaño de la letra
-              doc.text(linkText, linkX, linkY);
+            doc.textWithLink(linkText, linkX, linkY, {
+              url: 'https://maps.google.com',
+              underline: false,
+            });
     
-              const underlineX = linkX;
-              const underlineY = linkY + underlineOffset;
-              const underlineWidth = linkWidth;
-              const underlineHeight = 0.5; // Grosor del subrayado
-    
-              doc.setDrawColor(0, 0, 255); // Establecer el color azul para el subrayado
-              doc.setLineWidth(underlineHeight);
-              doc.line(underlineX, underlineY, underlineX + underlineWidth, underlineY);
-            }
-          }
-    
-          if (data.section === 'head') {
-            const cellGoogleMaps = data.cell; // Obtener la celda de encabezado "GOOGLE MAPS"
-            const image = new Image();
-            image.src = 'assets/imagen.png'; // Ruta de la imagen "imagen.png" en la carpeta de assets
-    
-            const imageX = cellGoogleMaps.x + cellGoogleMaps.padding('left'); // Ajustar la posición X de la imagen alineándola con el borde izquierdo de la celda de encabezado
-            const imageY = cellGoogleMaps.y + cellGoogleMaps.padding('top'); // Ajustar la posición Y de la imagen alineándola con el borde superior de la celda de encabezado
-            const imageWidth = cellGoogleMaps.width - cellGoogleMaps.padding('horizontal'); // Ajustar el ancho de la imagen para que se ajuste dentro de la celda de encabezado
-            const imageHeight = cellGoogleMaps.height - cellGoogleMaps.padding('vertical'); // Ajustar la altura de la imagen para que se ajuste dentro de la celda de encabezado
-    
-            doc.addImage(image, 'PNG', imageX, imageY, imageWidth, imageHeight);
+            doc.setLineWidth(0.5);
+            doc.setDrawColor(0, 0, 255);
+            doc.line(linkX, textY, textX, textY);
           }
         }
       },
     });
-    
+     
 
     
 
